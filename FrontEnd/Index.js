@@ -1,1 +1,1 @@
-
+// Récupération des elements  gallery
