@@ -54,9 +54,9 @@ filtrage.appendChild(filtreHotelRestaurants);
 
 // Action de filtrage
 
-//function affichageFiltreTous(recuperation) {
-/*for (let i = 0; i < recuperation.length; i++) {
-    if recuperation [i]) {
+function affichageFiltreTous(recuperation) {
+  for (let i = 0; i < recuperation.length; i++) {
+    if (condition) {
     }
     const element = recuperation[i];
   }
@@ -64,10 +64,8 @@ filtrage.appendChild(filtreHotelRestaurants);
 
 // Récupération des élements de l'API' mettre en bas de la page
 
-function RecupererTravaux 
-
 fetch("http://localhost:5678/api/works")
   .then((reponse) => reponse.json())
   .then((recuperation) => {
     console.log(recuperation);
-  }); */
+  });
