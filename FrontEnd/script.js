@@ -69,3 +69,9 @@ fetch("http://localhost:5678/api/works")
   .then((recuperation) => {
     console.log(recuperation);
   });
+
+fetch("http://localhost:5678/api/categories")
+  .then((retour) => retour.json())
+  .then((category) => {
+    console.log(category);
+  });
