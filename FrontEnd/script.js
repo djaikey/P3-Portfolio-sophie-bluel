@@ -1,8 +1,26 @@
-// creation de l'affichage par defaut
+// Affichage par defaut
+function affichage(travaux) {
+  for (let i = 0; i < travaux.length; i++) {
+    const element = travaux[i];
+    // Création de l'affiçchage de la galerie par defaut
 
-// Création de l'affiçchage de la galerie par defaut
+    const sectionArticle = document.querySelector(".gallery");
 
-// Récuperation des element de l'API
+    const article = (document.createElement("article").innerHTML += "");
+    article = element;
+
+    const imageUrlArticle = document.createElement("img");
+    imageUrlArticle.src = imageUrl.element;
+
+    const titleArticle = document.createElement("p");
+    titleArticle.innerText = title.element;
+
+    article.appendChild(sectionArticle);
+    imageUrlArticle.appendChild(article);
+    titleArticle.appendChild(article);
+  }
+}
+affichage();
 
 // Affichage des travaux
 
