@@ -33,6 +33,7 @@ function affichageParDefaut() {
 }
 
 // Appel de la fonction d'affichage par defaut
+
 affichageParDefaut();
 
 // Catégorie de filtrage
@@ -47,7 +48,7 @@ function recuperationCategories() {
       for (let i = 0; i < category.length; i++) {
         const categories = category[i];
 
-        function boutonTous(categories) {
+        function boutonFiltreTous() {
           // Choix de l'emplacement parent
 
           const sectionFiltres = document.querySelector(".filtres");
@@ -69,7 +70,7 @@ function recuperationCategories() {
           });
         }
       }
-      boutonTous();
+      boutonFiltreTous();
     });
 }
 recuperationCategories();
