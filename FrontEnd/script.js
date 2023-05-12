@@ -1,38 +1,21 @@
-// Récupération des donnés de l'API
+//Création de l'affichage
 
-function affichage(filtre = "tous") {
-  fetch("http://localhost:5678/api/works")
-    .then((reponse) => reponse.json())
-    .then((travaux) => {
-      if (filtre == "tous") {
-        maFonction(travaux);
-      } else {
-        const filtrage = travaux.filter(function (afichageFiltrer) {
-          return afichageFiltrer.category.name === filtre;
-        });
-        maFonction(filtrage);
-      }
-
-      // Récupération elements du tableau travaux
-    });
-}
-
-function maFonction(liste) {
-  // Choix de l'emplacement parent (balise qui accueuilra les fiches)
+function affichage(elementsGalerie) {
+  // Choix de l'emplacement parent (balise qui accueui les fiches)
 
   const sectionAffichage = document.querySelector(".gallery");
   sectionAffichage.innerHTML = "";
-  for (let i = 0; i < liste.length; i++) {
-    const articleListe = liste[i];
+  for (let i = 0; i < elementsGalerie.length; i++) {
+    const articleGalerie = elementsGalerie[i];
 
     // Création de l'affiçchage de la galerie par defaut
 
     const fiche = document.createElement("div");
     fiche.classList.add("fiche");
     const image = document.createElement("img");
-    image.src = articleListe.imageUrl;
+    image.src = articleGalerie.imageUrl;
     const titre = document.createElement("p");
-    titre.innerText = articleListe.title;
+    titre.innerText = articleGalerie.title;
 
     //Rattachement des elements
 
@@ -42,14 +25,39 @@ function maFonction(liste) {
   }
 }
 
+/* Récupération des donnés de l'API 
+la fonction recuperationTravaux envoie l'affichage de filtre tous par defaut*/
+
+function recuperationTravaux(filtre = "tous") {
+  // Récupération elements du tableau travaux
+
+  fetch("http://localhost:5678/api/works")
+    .then((reponse) => reponse.json())
+    .then((travaux) => {
+      // informations fonctionnement affichage
+
+      if (filtre == "tous") {
+        affichage(travaux);
+
+        // information d'affichage filtrer
+      } else {
+        const filtrage = travaux.filter(function (afichageFiltrer) {
+          return afichageFiltrer.category.name === filtre;
+        });
+        affichage(filtrage);
+      }
+    });
+}
+
 // Catégorie de filtrage
 
 function recuperationCategories() {
+  // Récupération des catégories de l'API
+
   fetch("http://localhost:5678/api/categories")
     .then((reponse) => reponse.json())
     .then((category) => {
       categoriesFiltres = category;
-      console.log(categoriesFiltres);
 
       // Choix de l'emplacement parent
 
@@ -58,6 +66,7 @@ function recuperationCategories() {
       // Création du bouton filtre
 
       const boutonTous = document.createElement("button");
+      boutonTous.classList.add("boutonTous");
       boutonTous.innerText = "Tous";
 
       // Rattachement du bouton
@@ -67,28 +76,34 @@ function recuperationCategories() {
       // Evenement au clique
 
       boutonTous.addEventListener("click", () => {
-        affichage();
+        recuperationTravaux();
       });
+
+      // assignation des catégories au boutons filtres
 
       for (let i = 0; i < category.length; i++) {
         const categories = category[i];
 
         // creation boutons filtres
 
-        const boutonFiltres = document.createElement("button");
-        boutonFiltres.classList.add("boutonFiltress");
-        boutonFiltres.innerText = categories.name;
-        sectionFiltres.appendChild(boutonFiltres);
+        const boutonsFiltres = document.createElement("button");
+        boutonsFiltres.classList.add("boutonsFiltres");
+        boutonsFiltres.innerText = categories.name;
+        sectionFiltres.appendChild(boutonsFiltres);
 
         // evenement click
 
-        boutonFiltres.addEventListener("click", () => {
-          affichage(categories.name);
+        boutonsFiltres.addEventListener("click", () => {
+          recuperationTravaux(categories.name);
         });
       }
     });
 }
+
+// Appel de la fonction recuperation des travaux
+
 recuperationCategories();
+
 // Appel de la fonction d'affichage par defaut
 
-affichage();
+recuperationTravaux();
