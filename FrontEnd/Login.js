@@ -1,7 +1,9 @@
 function formulaireLogin() {
   const sectionformulaire = document.querySelector(".section-login");
+
   //formulaire
   const formulaire = document.createElement("form");
+
   //Label et champs de l'e-mail
   const labelEmail = document.createElement("p");
   labelEmail.classList.add("label-formulaire");
@@ -18,16 +20,21 @@ function formulaireLogin() {
   const boutonEnvoieFormulaire = document.createElement("button");
   boutonEnvoieFormulaire.classList.add("bouton-validation");
   boutonEnvoieFormulaire.innerText = "Se connecter";
+  boutonEnvoieFormulaire.addEventListener("click", (e) => {
+    e.preventDefault;
+    alert("ERR 404 tentative de connection échouée !");
+  });
   // Liens mot de passe oublié
 
   //Rattachement element formulaire de connection
 
   sectionformulaire.appendChild(formulaire);
-
+  sectionformulaire.appendChild(boutonEnvoieFormulaire);
   formulaire.appendChild(labelEmail);
   formulaire.appendChild(champsEmail);
   formulaire.appendChild(labelMotDePass);
   formulaire.appendChild(champsMotDePass);
-  formulaire.appendChild(boutonEnvoieFormulaire);
 }
+
+function validationFormulaire() {}
 formulaireLogin();
