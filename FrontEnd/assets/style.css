@@ -131,8 +131,7 @@ li:hover {
 .filtres {
 	display: flex;
 	justify-content: center;
-	
-
+	margin: 50px;	
 }
 
 .boutonsFiltres,.boutonTous {
