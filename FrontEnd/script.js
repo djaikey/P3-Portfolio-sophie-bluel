@@ -75,14 +75,14 @@ function recuperationCategories() {
 
         // creation boutons filtres
 
-        const boutonObjet = document.createElement("button");
-        boutonObjet.classList.add("boutonObjets");
-        boutonObjet.innerText = categories.name;
-        sectionFiltres.appendChild(boutonObjet);
+        const boutonFiltres = document.createElement("button");
+        boutonFiltres.classList.add("boutonFiltress");
+        boutonFiltres.innerText = categories.name;
+        sectionFiltres.appendChild(boutonFiltres);
 
         // evenement click
 
-        boutonObjet.addEventListener("click", () => {
+        boutonFiltres.addEventListener("click", () => {
           affichage(categories.name);
         });
       }
