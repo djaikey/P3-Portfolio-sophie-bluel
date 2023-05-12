@@ -125,6 +125,38 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+/** Filter disigne**/
+
+.filtres {
+	display: flex;
+	justify-content: center;
+	
+
+}
+
+.boutonsFiltres,.boutonTous {
+	
+	min-width: 100px;
+	height: 37px;
+	margin: 5px;
+	padding: 9px 14px  9px 14px ;
+	border:1px solid #1D6154;
+	border-radius:60px ;
+	background-color: #FFFF;
+	font-family: 'Syne';
+	color: #1D6154;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+
+}
+
+.boutonsFiltres:hover,.boutonTous:hover {
+	background-color: #1D6154;
+	color: #FFFF;
+}
+
 .gallery {
 	width: 100%;
 	display: grid;
