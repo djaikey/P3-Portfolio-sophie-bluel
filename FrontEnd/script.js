@@ -26,16 +26,14 @@ function affichage(elementsGalerie) {
 }
 
 /* Récupération des donnés de l'API 
-la fonction recuperationTravaux envoie l'affichage de filtre tous par defaut*/
+la fonction recuperationTravaux indique que l'affichage de filtre tous et l'affichage par defaut par defaut*/
 
 function recuperationTravaux(filtre = "tous") {
-  // Récupération elements du tableau travaux
-
+  // Récupération elements du tableau travaux de l'API
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
     .then((travaux) => {
       // informations fonctionnement affichage
-
       if (filtre == "tous") {
         affichage(travaux);
 
