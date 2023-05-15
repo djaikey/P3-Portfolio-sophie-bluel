@@ -1,8 +1,9 @@
-function formulaireLogin() {
+function formulaireLogin(infoLogin) {
   const sectionformulaire = document.querySelector(".section-login");
 
   //formulaire
   const formulaire = document.createElement("form");
+  formulaire.classList.add("formulaire-login");
 
   //Label et champs de l'e-mail
   const labelEmail = document.createElement("p");
@@ -10,6 +11,7 @@ function formulaireLogin() {
   labelEmail.innerText = "E-mail";
   const champsEmail = document.createElement("input");
   champsEmail.classList.add("champs-formulaire");
+
   // Label et champs mot de passe
   const labelMotDePass = document.createElement("p");
   labelMotDePass.classList.add("label-formulaire");
@@ -20,10 +22,11 @@ function formulaireLogin() {
   const boutonEnvoieFormulaire = document.createElement("button");
   boutonEnvoieFormulaire.classList.add("bouton-validation");
   boutonEnvoieFormulaire.innerText = "Se connecter";
-  boutonEnvoieFormulaire.addEventListener("click", (e) => {
-    e.preventDefault;
-    alert("ERR 404 tentative de connection échouée !");
+  boutonEnvoieFormulaire.addEventListener("click", (event) => {
+    event.preventDefault;
+    alert("connectione en cours");
   });
+
   // Liens mot de passe oublié
 
   //Rattachement element formulaire de connection
@@ -36,5 +39,9 @@ function formulaireLogin() {
   formulaire.appendChild(champsMotDePass);
 }
 
-function validationFormulaire() {}
 formulaireLogin();
+function loginRecuperation() {
+  fetch("http://localhost:5678/api/users/login");
+  methode = "POST".then((reponse) => reponse.json).then(infoLogin);
+  console.log("recupOk");
+}
