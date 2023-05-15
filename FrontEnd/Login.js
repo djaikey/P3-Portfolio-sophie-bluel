@@ -24,9 +24,8 @@ function formulaireLogin(infoLogin) {
   boutonEnvoieFormulaire.innerText = "Se connecter";
   boutonEnvoieFormulaire.addEventListener("click", (event) => {
     event.preventDefault;
-    alert("connectione en cours");
+    alert("saisie  des informations de connection incorrecte");
   });
-
   // Liens mot de passe oublié
 
   //Rattachement element formulaire de connection
@@ -40,8 +39,5 @@ function formulaireLogin(infoLogin) {
 }
 
 formulaireLogin();
-function loginRecuperation() {
-  fetch("http://localhost:5678/api/users/login");
-  methode = "POST".then((reponse) => reponse.json).then(infoLogin);
-  console.log("recupOk");
-}
+
+function loginRecuperation() {}
