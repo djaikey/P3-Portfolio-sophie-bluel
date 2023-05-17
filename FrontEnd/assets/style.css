@@ -238,7 +238,7 @@ h2{
 main {
 	display: flex;
 	justify-content: center;
-	justify-items: ;
+	
 	
 }
 
@@ -262,10 +262,14 @@ main {
 }
  .bouton-validation{
 	color: #FFFF;
+	font-family: syne;
+	font-weight: 700;
 	width: 179px;
 	height: 36px;
 	background: #1D6154;
 	border-radius: 60px;
-	justify-self: center;
+	border:none;
+	
+	
  }
 
