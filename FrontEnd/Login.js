@@ -13,7 +13,6 @@ function formulaire() {
   champsEmail.classList.add("champs-formulaire");
   champsEmail.type = "text";
   champsEmail.name = "email";
-  champsEmail.value = "email";
 
   console.log(champsEmail.value);
 
@@ -49,6 +48,7 @@ function boutonFormulaire() {
   //Evenement
   boutonEnvoie.addEventListener("click", (evenement) => {
     evenement.preventDefault();
+    alert("click");
 
     fetch("http://localhost:5678/api/users/login");
     {
