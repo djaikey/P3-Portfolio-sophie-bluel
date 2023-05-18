@@ -38,6 +38,8 @@ formulaire.appendChild(champsMotDePasse);
 
 //appel Bouton
 boutonFormulaire();
+
+
 //Lien mot de passe oublié
 
 const lienOublieMDP = document.createElement("a");
