@@ -31,6 +31,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 ol, ul {
 	list-style: none;
 }
@@ -222,11 +227,13 @@ footer nav ul {
 /** Page formulaire de connection**/
 
 body{
-	font-family: 'Work Sans';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
+	
 	background-color:#FFFEF8;
+}
+.section-login {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 h2{
@@ -235,18 +242,13 @@ h2{
 	margin: 30px;
 }
 
-main {
-	display: flex;
-	justify-content: center;
-	
-	
-}
 
-.formulaire{
+
+.formulaire-login{
 
 	display: flex;
 	flex-direction: column;
-	justify-items: center;
+	justify-content: center;
 }
 
 .label-formulaire{
