@@ -36,14 +36,16 @@ champsMotDePasse.name = "motDePasse";
 formulaire.appendChild(labelMotDePasse);
 formulaire.appendChild(champsMotDePasse);
 
-//Lien mot de passe oublié
+/*Lien mot de passe oublié
 
 const lienOublieMDP = document.createElement("a");
 lienOublieMDP.textContent= " Mot de passe oublié"
 lienOublieMDP.classList.add="Lien-oublie"
 
 
-formulaire.appendChild(lienOublieMDP)
+sectionformulaire.appendChild(lienOublieMDP)
+
+*/
 
 //donnée du formulaire
 
