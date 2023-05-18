@@ -1,3 +1,5 @@
+
+/*
 //formulaire
 const sectionformulaire = document.querySelector(".section-login");
 const formulaire = document.createElement("form");
@@ -64,28 +66,81 @@ function boutonFormulaire() {
   
   boutonEnvoie.addEventListener("click", (e) => {
     e.preventDefault
-    console.log(champsEmail.value);
-    console.log(champsMotDePasse.value);
+    const email = champsEmail.value;
+    const motDePasse = champsMotDePasse.value;
+    console.log(email);
+    console.log(motDePasse);
     
-    if(champsEmail.value== 0|| champsMotDePasse.value== 0){
+    if(champsEmail.value== ""|| champsMotDePasse.value== ""){
       alert("Erreur dans l’identifiant ou le mot de passe")
     }
     
-    fetch ("http://localhost:5678/api/users/post",{
+    
+    /*const response = fetch ("http://localhost:5678/api/users/login",{
 
       method:"POST",
       headers: {
-        "accept":"application/json",
-        string:"application/json"  
+       "Content-Type":"application/json"
       },
       body:JSON.stringify({   
-        "email": champsEmail.value,
-        "password": champsEmail.value,
+        email,
+        motDePasse
       })
-    });
+
+
+    })
+    const response = fetch('http://localhost:5678/api/users/login', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ email, motDePasse })
+    })
+    .catch(error=> {
+      alert(error.message)
+    })
 
   });
   
 }
+*/
+const loginForm = document.querySelector('form');
+const emailInput = document.querySelector('input[name="email"]');
+const passwordInput = document.querySelector('input[name="psw"]');
 
+// Écoute de l'événement de soumission du formulaire de connexion
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  // Envoi des données d'identification à l'API pour vérification
+  
+    const response = fetch('http://localhost:5678/api/users/login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ email, password })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erreur dans l’identifiant ou le mot de passe');
+    }
+    return response.json();
+  })
+  .then(data => {
+    if (data.token) {
+      // Stockage du token dans le stockage local
+      localStorage.setItem('token', data.token);
+
+      // Redirection vers la page d'accueil
+      window.location.href = './index.html';
+    } else {
+      throw new Error('Erreur lors de la connexion');
+    }
+  })
+  .catch(error => {
+    console.error('Erreur lors de la connexion:', error);
+    alert(error.message);
+  });
+  
+});
 
