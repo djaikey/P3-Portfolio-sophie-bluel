@@ -36,7 +36,9 @@ champsMotDePasse.name = "motDePasse";
 formulaire.appendChild(labelMotDePasse);
 formulaire.appendChild(champsMotDePasse);
 
-/*Lien mot de passe oublié
+//appel Bouton
+boutonFormulaire();
+//Lien mot de passe oublié
 
 const lienOublieMDP = document.createElement("a");
 lienOublieMDP.textContent= " Mot de passe oublié"
@@ -45,7 +47,7 @@ lienOublieMDP.classList.add="Lien-oublie"
 
 sectionformulaire.appendChild(lienOublieMDP)
 
-*/
+
 
 //donnée du formulaire
 
@@ -84,4 +86,4 @@ function boutonFormulaire() {
   
 }
 
-boutonFormulaire();
+

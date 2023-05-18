@@ -271,7 +271,10 @@ h2{
 	background: #1D6154;
 	border-radius: 60px;
 	border:none;
-	
-	
+	margin: 20px;
+
  }
 
+.lien-oublie {
+	margin: 20px;
+}
