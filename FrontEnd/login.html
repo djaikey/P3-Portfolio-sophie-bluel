@@ -10,15 +10,17 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
-<body>
+<body class="login-body">
     <header>
         <h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+
+        <!--navigation-->
+        
         <nav>
             <ul>
-                <li>projets</li>
-                <li>contact</li>
-                <li id="Login">login</li>
-                <li id="logout">logout</li>
+                <a href="index.html"><li>projets</li></a>
+                <a href="index.html"><li>contact</li></a>
+                <a href="login.html"><li >login</li></a>
                 <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
             </ul>
         </nav>
@@ -28,7 +30,7 @@
             <h2>Log in</h2>
           
             <div class="section-login">
-                <div class="email-form">
+                <div class="label-">
                 <label for="email" class="label-formulaire"><b>E-mail</b></label>
                 <input type="text" name="email" required class="champs-formulaire">
                 </div>
@@ -36,25 +38,21 @@
                 <label for="psw" class="label-formulaire"><b>Mot de passe</b></label>
                 <input type="password" name="psw" required class="champs-formulaire">
                 </div>
-                <div class="connexion-password">
+                <div class="connexion-oublie">
                     <button type="submit" class="bouton-validation">Se connecter</button>
-                    <span class="lien-oublie"><a href="#">Mot de passe oublié</a></span>
+                    <span id="lien-oublie"><a href="#">Mot de passe oublié</a></span>
                 </div>
             </div>
           </form> 
         
-        <!-- <section class="section-login">
-            <h2>Log in</h2>
-            
-        </section> -->
-        
+             
     </main>
     <footer>
         
         <footer>
             <nav>
                 <ul>
-                    <li>Mentions Légales</li>
+                    <a href="#"><li>Mentions Légales</li></a>
                 </ul>
             </nav>
         </footer>
