@@ -31,6 +31,12 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
+.login-body{
+width: 1440px;
+max-height: 1024px;
+
+}
 main {
 	display: flex;
 	flex-direction: column;
@@ -57,6 +63,7 @@ body {
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+	background-color:#FFFEF8;
 }
 header {
 	display: flex;
@@ -95,9 +102,21 @@ nav ul {
 	list-style-type: none;
 
 }
+nav a {
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+}
+li{
+	color:black;
 }
 
 li:hover {
@@ -220,16 +239,14 @@ footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em;
-	background-color: #E5E5E5;
 	margin: 20px;
+	height: 60px;
+	max-width: 1440px;
 }
 
 /** Page formulaire de connection**/
 
-body{
-	
-	background-color:#FFFEF8;
-}
+
 .section-login {
 display: flex;
 flex-direction: column;
@@ -242,7 +259,10 @@ h2{
 	margin: 30px;
 }
 
-
+.section-login{
+	display: flex;
+	justify-content: center;
+}
 
 .formulaire-login{
 
@@ -275,13 +295,20 @@ h2{
 
  }
 
-.lien-oublie {
-	margin: 20px;
+.connection-oublie {
+ display: flex;
+ justify-content: center;
 }
 
-/*Page d'accueil utilisateur deconnecté et connecté*/
+span {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+}
+/*Redirection Page d'accueil utilisateur deconnecté et connecté*/
 
 /*deconnecté*/
-#logout {
-	display: none;
-}
+
+/*connecté*/
+
