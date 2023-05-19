@@ -49,11 +49,14 @@ function recuperationCategories() {
     });
 }
 
-/* Récupération des donnés Travaux de l'API 
-le parametre de la fonction recuperationTravaux indique que l'affichage de filtre tous et l'affichage par defaut par defaut*/
+// Récupération des donnés Travaux de l'API
 
 function recuperationTravaux(filtre = "tous") {
+  /*le parametre de la fonction recuperationTravaux indique 
+  l'affichage de filtre tous et l'affichage par defaut par defaut*/
+
   // Récupération elements du tableau travaux de l'API
+
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
     .then((travaux) => {
@@ -67,6 +70,7 @@ function recuperationTravaux(filtre = "tous") {
           return afichageFiltrer.category.name === filtre;
         });
         affichage(filtrage);
+        //appel de la fonction affichage avec fitrage pour argument
       }
     });
 }

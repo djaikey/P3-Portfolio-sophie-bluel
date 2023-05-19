@@ -1,4 +1,5 @@
 // Par defaut
+
 const formulaire = document.querySelector('form');
 const champsEmail = document.querySelector('input[name="email"]');
 const champsMotDePasse = document.querySelector('input[name="psw"]');
@@ -6,6 +7,7 @@ const champsMotDePasse = document.querySelector('input[name="psw"]');
 
 
 // Événement se connecter
+
 formulaire.addEventListener('submit', (event) => {
   event.preventDefault(); // Empêche l'envoi du formulaire par défaut
 
@@ -32,15 +34,17 @@ formulaire.addEventListener('submit', (event) => {
     return response.json();
   })
 
-  // Si data.token existe
+  // Si data.token est retourné
 
   .then(data => {
     if (data.token) {
 
       // Stockage du token dans localstorage
+
       localStorage.setItem('token', data.token);
 
       // Redirection page d'accueil
+
       window.location.href = './index.html';
     } else {
       throw new Error('Erreur lors de la connexion');
