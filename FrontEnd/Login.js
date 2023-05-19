@@ -5,7 +5,7 @@ const champsMotDePasse = document.querySelector('input[name="psw"]');
 
 
 
-// Événement de soumission du formulaire
+// Événement se connecter
 formulaire.addEventListener('submit', (event) => {
   event.preventDefault(); // Empêche l'envoi du formulaire par défaut
 
@@ -24,7 +24,7 @@ formulaire.addEventListener('submit', (event) => {
 
   .then(response => {
 
-    //Si la réponse n'est pas correcte
+    //Si la réponse n'est pas ok
 
     if (!response.ok) {
       throw new Error('Erreur dans l’identifiant ou le mot de passe');
@@ -47,16 +47,7 @@ formulaire.addEventListener('submit', (event) => {
     }
   })
 
-  // Décommenter pour affichage des erreurs 
 
-  /* supr
-  
-  .catch(error => {
-    console.error('Erreur lors de la connexion:', error);
-    alert(error.message);
-  });
-
- supr*/
   
 });
 
