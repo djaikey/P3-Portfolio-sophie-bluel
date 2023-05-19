@@ -278,3 +278,10 @@ h2{
 .lien-oublie {
 	margin: 20px;
 }
+
+/*Page d'accueil utilisateur deconnecté et connecté*/
+
+/*deconnecté*/
+#logout {
+	display: none;
+}
