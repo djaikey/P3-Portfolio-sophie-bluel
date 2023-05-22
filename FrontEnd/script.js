@@ -109,3 +109,18 @@ recuperationCategories();
 // Appel de la fonction d'affichage par defaut
 
 recuperationTravaux();
+
+// Action logout déconnection
+function seDeconnecter() {
+  const logout = document.getElementById("logout");
+
+  logout.addEventListener("click", (e) => {
+    e.preventdefault;
+    deconnection();
+  });
+}
+seDeconnecter();
+function deconnection() {
+  const actionDeconnection = localStorage.clear();
+  const affichageLogout = (logout.style.display = "none");
+}
