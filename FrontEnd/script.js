@@ -122,8 +122,7 @@ function seDeconnecter() {
 
 function deconnection() {
   const actionDeconnection = localStorage.clear();
-  const logoutDisplayNone = (logout.style.display = "none");
-  const logintDisplayBlock = (login.style.display = "block");
+  location.reload();
 }
 
 seDeconnecter();
@@ -131,11 +130,14 @@ seDeconnecter();
 function statutConnecte() {
   const token = localStorage.getItem("token");
   const login = document.getElementById("login");
-  const logintDisplayNone = (login.style.display = "none");
+  console.log(token);
 
-  if ((token, true)) {
+  // Condition
+
+  if (token != null) {
+    login.style.display = "none";
     const header = document.querySelector("header");
-    const headerFlexDirection = (header.style.flexDirection = "column-reverse");
+    header.style.flexDirection = "column-reverse";
     const barreModification = document.createElement("div");
     barreModification.classList.add("barre-modif");
     const labelModif = document.createElement("h3");
@@ -149,6 +151,9 @@ function statutConnecte() {
     header.appendChild(barreModification);
     barreModification.appendChild(labelModif);
     barreModification.appendChild(boutonPublier);
-  }else()
+  } else {
+    logout.style.display = "none";
+    login.style.display = "block";
+  }
 }
 statutConnecte();
