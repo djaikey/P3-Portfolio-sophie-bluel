@@ -119,8 +119,33 @@ function seDeconnecter() {
     deconnection();
   });
 }
-seDeconnecter();
+
 function deconnection() {
   const actionDeconnection = localStorage.clear();
-  const affichageLogout = (logout.style.display = "none");
+  const logoutDisplayNone = (logout.style.display = "none");
+  const logintDisplayBlock = (login.style.display = "block");
 }
+
+seDeconnecter();
+
+function statutConnecte() {
+  const token = localStorage.getItem("token");
+  const login = document.getElementById("login");
+  const logintDisplayNone = (login.style.display = "none");
+  if ((token, true)) {
+    const header = document.querySelector("header");
+    const barreModification = document.createElement("div");
+    barreModification.classList.add("barre-modif");
+    const labelModif = document.createElement("h3");
+    labelModif.innerText = "Mode édition";
+    const boutonPublier = document.createElement("button");
+    boutonPublier.innerText = "publier les changements";
+    boutonPublier.type = "submit";
+    //Rattachement
+
+    header.appendChild(barreModification);
+    barreModification.appendChild(labelModif);
+    barreModification.appendChild(boutonPublier);
+  }
+}
+statutConnecte();

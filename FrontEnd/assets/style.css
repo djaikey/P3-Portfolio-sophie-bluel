@@ -67,8 +67,17 @@ body {
 }
 header {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	margin: 50px 0
+}
+.barre-modif{
+	display: flex;
+	width: 1440px;
+	height: 59px;
+	color: #FFFEF8;
+	background-color: black;
+
 }
 section {
 	margin: 50px 0
