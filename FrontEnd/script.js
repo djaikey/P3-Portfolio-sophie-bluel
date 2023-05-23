@@ -132,8 +132,10 @@ function statutConnecte() {
   const token = localStorage.getItem("token");
   const login = document.getElementById("login");
   const logintDisplayNone = (login.style.display = "none");
+
   if ((token, true)) {
     const header = document.querySelector("header");
+    const headerFlexDirection = (header.style.flexDirection = "column-reverse");
     const barreModification = document.createElement("div");
     barreModification.classList.add("barre-modif");
     const labelModif = document.createElement("h3");
@@ -141,11 +143,12 @@ function statutConnecte() {
     const boutonPublier = document.createElement("button");
     boutonPublier.innerText = "publier les changements";
     boutonPublier.type = "submit";
+    boutonPublier.classList.add("bouton-publier");
     //Rattachement
 
     header.appendChild(barreModification);
     barreModification.appendChild(labelModif);
     barreModification.appendChild(boutonPublier);
-  }
+  }else()
 }
 statutConnecte();
