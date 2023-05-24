@@ -348,10 +348,10 @@ span {
 }
 .bouton-fermer{
 	margin: 0;
-	justify-items: right;
+	display: flex;
 	border: none;
 	background-color: #FFFEFF;
-	display: flex;
+	
 	
 }
 .modale h2 {
@@ -393,7 +393,10 @@ margin: 30px;
 }
 
 /** Modale2 **/
-
+.retour-fermer{
+	display: flex;
+	justify-content: space-between;
+}
 .inserer-photo{
 	width: 420px;
 	height: 169px;
