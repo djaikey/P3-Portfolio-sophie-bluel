@@ -130,7 +130,6 @@ seDeconnecter();
 function statutConnecte() {
   const token = localStorage.getItem("token");
   const login = document.getElementById("login");
-  console.log(token);
 
   // Condition
 
