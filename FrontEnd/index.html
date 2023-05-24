@@ -44,37 +44,43 @@
 		<div id="modale1" class="modale">
 			<div class="contenu-modale">
 				<button type="submit" class="bouton-fermer">X</button>
-				<h1>Galerie photo</h1>
+				<h2>Galerie photo</h2>
 				<div class="affichage-miniature">
 					<!-- Affichage des travaux en format réduit JS-->
 				</div>
 				<div class="ajouter-supprimer">
-					<button type="submit" class="bouton-validation">Ajouter une photo</button>
-					<p id="supprimer">Supprimer la galerie</p>
+					<button type="submit" class="bouton-validation" >Ajouter une photo</button>
+					<a id="supprimer">Supprimer la galerie</a>
 
 				</div>
 			</div>
 		</div>
 		<div id="modale2" class="modale">
-			<h1>Ajout photo</h1>
-			<div class="inserer-photo">
+			<div class="contenu-modale">
+				<button type="submit" class="bouton-fermer">X</button>
+				<h2>Ajout photo</h2>
+				<div class="inserer-photo">
+					<button type="submit" class="bouton-validation" >+ Ajouter photo</button>	
+					<p>jpg,png. 4mo max</p>
+				</div>
+				<form class="formulaire-ajout">
+					<div class="label-champs">
+						<label for="titre" class="label-formulaire"><b>Titre</b></label>
+						<input type="text" name="titre" required class="champs-formulaire">
+					</div>
+					<div class="label-champs">
+						<label for="categorie" class="label-formulaire"><b>Categorie</b></label>
+						<select name="categories" id="liste-categories" class="champs-formulaire">
+							<option value="Champs-selection"></option>
+							<option value="objects">Objets</option>
+							<option value="appartements">Appartements</option>
+							<option value="hotels-restaurants">Hotel & Restaurants</option>
+						</select>
+					</div>
+				</form>
+				<button type="submit" name="Valider"id="valider-modale2" class="bouton-validation">Valider</button>
 
 			</div>
-			<form class="formulaire-ajout">
-				<div class="label-champs">
-					<label for="titre" class="label-formulaire"><b>Titre</b></label>
-					<input type="text" name="titre" required class="champs-formulaire">
-				</div>
-				<div class="label-champs">
-					<label for="categorie" class="label-formulaire"><b>Categorie</b></label>
-					<select name="categories" id="liste-categories">
-						<option value="Champs-selection"></option>
-						<option value="objects">Objets</option>
-						<option value="appartements">Appartements</option>
-						<option value="hotels-restaurants">Hotel & Restaurants</option>
-					</select>
-				</div>
-			</form>
 		</div>
 				<h2>Mes Projets</h2>
 		<div class="filtres">

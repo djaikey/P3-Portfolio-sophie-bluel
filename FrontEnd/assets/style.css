@@ -334,26 +334,98 @@ span {
 }
 /** Modales**/
 
-/** Modale 1 Gallerie photo **/
-
 .modale{
 	width: 630px;
 	height: 731px;
-	background-color: #FFFEF8;
+	background-color: #fffeff;
+	border-radius: 10px;
+	padding: 30px;
+}
+.contenu-modale{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .bouton-fermer{
+	margin: 0;
+	justify-items: right;
 	border: none;
-	background-color: #FFFEF8;
-	align-items: end;
+	background-color: #FFFEFF;
+	display: flex;
+	
 }
-.modale, h1 {
+.modale h2 {
 	font-family: 'Work Sans';
 	color: #000000;
+	font-weight: 400;
+	font-size: 26px;
+	text-align: center;
+}
+.modale .bouton-validation  {
+	display: flex;
+	justify-content: center;
+	justify-self: right;
+	align-items: center;
+	
+}
+.modale form{
+margin: 30px;
+}
+.modale .champs-formulaire{
+	width: 440px;
+}
+.modale .label-formulaire{
+	font-family: Work Sans;
+	font-size: 14px;
+	font-weight: 500;
+}
+/** Modale 1 Gallerie photo **/
 
-font-weight: 400;
-font-size: 26px;
-
-text-align: center;
+.ajouter-supprimer{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
 }
 
+#supprimer{
+	display: flex;
+	align-self: center;
+}
 
+/** Modale2 **/
+
+.inserer-photo{
+	width: 420px;
+	height: 169px;
+	padding: 10px;
+	border-radius: 3px;
+	background-color:#E8F1F6 ;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+
+}
+.inserer-photo p {
+display: flex;
+aligne-self: center;
+}
+
+.inserer-photo .bouton-validation{
+	background-color:#CBD6DC ;
+	color: #306685;
+}
+
+.formulaire-ajout{
+	width: 440px;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+}
+#valider-modale2{
+	background-color:#A7A7A7 ;
+	height: 36px;
+	width: 237px;
+	display: flex;
+	
+}
