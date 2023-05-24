@@ -110,22 +110,7 @@ recuperationCategories();
 
 recuperationTravaux();
 
-// Action logout déconnection
-function seDeconnecter() {
-  const logout = document.getElementById("logout");
-
-  logout.addEventListener("click", (e) => {
-    e.preventdefault;
-    deconnection();
-  });
-}
-
-function deconnection() {
-  const actionDeconnection = localStorage.clear();
-  location.reload();
-}
-
-seDeconnecter();
+// Statut utilisateur connecté
 
 function statutConnecte() {
   const token = localStorage.getItem("token");
@@ -156,3 +141,29 @@ function statutConnecte() {
   }
 }
 statutConnecte();
+// Action logout déconnection via logout
+function seDeconnecter() {
+  //selection de l'élement declancheur
+
+  const logout = document.getElementById("logout");
+
+  // Evenement au click
+
+  logout.addEventListener("click", (e) => {
+    e.preventdefault;
+    deconnection();
+  });
+}
+// Deconnection
+
+function deconnection() {
+  // suppression token du localStorage
+
+  const actionDeconnection = localStorage.clear();
+
+  //Rafraichissement de la page
+
+  location.reload();
+}
+
+seDeconnecter();

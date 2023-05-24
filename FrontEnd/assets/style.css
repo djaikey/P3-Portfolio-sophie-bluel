@@ -270,7 +270,7 @@ footer nav ul {
 	max-width: 1440px;
 }
 
-/** Page formulaire de connection**/
+/** Page formulaire de connection **/
 
 
 .section-login {
@@ -332,9 +332,28 @@ span {
 	text-align: center;
 
 }
-/*Redirection Page d'accueil utilisateur deconnecté et connecté*/
+/** Modales**/
 
-/*deconnecté*/
+/** Modale 1 Gallerie photo **/
 
-/*connecté*/
+.modale{
+	width: 630px;
+	height: 731px;
+	background-color: #FFFEF8;
+}
+.bouton-fermer{
+	border: none;
+	background-color: #FFFEF8;
+	align-items: end;
+}
+.modale, h1 {
+	font-family: 'Work Sans';
+	color: #000000;
+
+font-weight: 400;
+font-size: 26px;
+
+text-align: center;
+}
+
 

@@ -38,6 +38,44 @@
 		</article>
 	</section>
 	<section id="portfolio">
+
+		<!-- Insertion de la modale-->
+
+		<div id="modale1" class="modale">
+			<div class="contenu-modale">
+				<button type="submit" class="bouton-fermer">X</button>
+				<h1>Galerie photo</h1>
+				<div class="affichage-miniature">
+					<!-- Affichage des travaux en format réduit JS-->
+				</div>
+				<div class="ajouter-supprimer">
+					<button type="submit" class="bouton-validation">Ajouter une photo</button>
+					<p id="supprimer">Supprimer la galerie</p>
+
+				</div>
+			</div>
+		</div>
+		<div id="modale2" class="modale">
+			<h1>Ajout photo</h1>
+			<div class="inserer-photo">
+
+			</div>
+			<form class="formulaire-ajout">
+				<div class="label-champs">
+					<label for="titre" class="label-formulaire"><b>Titre</b></label>
+					<input type="text" name="titre" required class="champs-formulaire">
+				</div>
+				<div class="label-champs">
+					<label for="categorie" class="label-formulaire"><b>Categorie</b></label>
+					<select name="categories" id="liste-categories">
+						<option value="Champs-selection"></option>
+						<option value="objects">Objets</option>
+						<option value="appartements">Appartements</option>
+						<option value="hotels-restaurants">Hotel & Restaurants</option>
+					</select>
+				</div>
+			</form>
+		</div>
 				<h2>Mes Projets</h2>
 		<div class="filtres">
 
@@ -74,5 +112,6 @@
 </footer>
 <script src="script.js"></script>
 <script src="Login.js"></script>
+<script src="modale.js"></script>
 </body>
 </html>
