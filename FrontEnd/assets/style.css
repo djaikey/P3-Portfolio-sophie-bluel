@@ -345,6 +345,7 @@ span {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-between;
 }
 .bouton-fermer{
 	margin: 0;
@@ -380,16 +381,42 @@ margin: 30px;
 	font-weight: 500;
 }
 /** Modale 1 Gallerie photo **/
+.affichage-miniature{
+	margin-left: 40px;
+	margin-right: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding-left: 40px;
+	padding-right:40px ;
+	margin: 30px;
+}
 
+.fiche-miniature{
+	display: flex;
+	flex-direction: column;
+	width: 78.13;
+	
+}
+.fiche-miniature p{
+	margin-top: 5px;
+}
+.modale img{
+	
+	width: 78.12px;
+	height: 104.08px;
+}
 .ajouter-supprimer{
 	display: flex;
 	flex-direction: column;
 	justify-items: center;
+	margin: 50px;
 }
 
 #supprimer{
 	display: flex;
 	align-self: center;
+	color: #D65353;
 }
 
 /** Modale2 **/
