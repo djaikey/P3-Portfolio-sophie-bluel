@@ -5,6 +5,7 @@ function recuperationElements() {
     .then((reponse) => reponse.json())
     .then((projets) => {
       // informations fonctionnement affichage
+
       console.log(projets);
       for (let i = 0; i < projets.length; i++) {
         const element = projets[i];
@@ -16,23 +17,27 @@ function recuperationElements() {
             "affichage-miniature"
           );
 
-          // Création de l'affiçchage de la galerie par defaut
-          // construction fiche
+          // Création de l'affiçchage miniature
+
+          // construction fiche miniature
+
           const ficheMiniature = document.createElement("div");
           ficheMiniature.classList.add("fiche-miniature");
-          // importation image
+          // création emplacement et importation image
           const image = document.createElement("img");
           image.src = element.imageUrl;
           image.classList.add = "image-miniature";
-          //choix éditer
-          const editer = document.createElement("p");
 
+          //choix éditer
+
+          const editer = document.createElement("p");
           editer.innerText = "éditer";
           editer.classList.add = "editer";
 
           //rattahement
+
           affichageMiniatures.appendChild(ficheMiniature);
-          ficheMiniature.append(image);
+          ficheMiniature.appendChild(image);
           ficheMiniature.appendChild(editer);
         }
       }
