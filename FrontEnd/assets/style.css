@@ -300,6 +300,7 @@ h2{
 .label-formulaire{
 	display: flex;
 }
+
 .champs-formulaire{
 	width: 379px;
 	height: 51px;
@@ -308,7 +309,8 @@ h2{
 	margin-bottom: 30px;
 	margin-top: 10px;
 }
- .bouton-validation{
+
+.bouton-validation{
 	color: #FFFF;
 	font-family: syne;
 	font-weight: 700;
@@ -319,7 +321,7 @@ h2{
 	border:none;
 	margin: 20px;
 
- }
+}
 
 .connection-oublie {
  display: flex;
@@ -332,6 +334,7 @@ span {
 	text-align: center;
 
 }
+
 /** Modales**/
 
 .modale{
@@ -341,20 +344,20 @@ span {
 	border-radius: 10px;
 	padding: 30px;
 }
+
 .contenu-modale{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 }
+
 .bouton-fermer{
 	margin: 0;
-	display: flex;
 	border: none;
 	background-color: #FFFEFF;
-	
-	
 }
+
 .modale h2 {
 	font-family: 'Work Sans';
 	color: #000000;
@@ -362,6 +365,7 @@ span {
 	font-size: 26px;
 	text-align: center;
 }
+
 .modale .bouton-validation  {
 	display: flex;
 	justify-content: center;
@@ -369,12 +373,15 @@ span {
 	align-items: center;
 	
 }
+
 .modale form{
 margin: 30px;
 }
+
 .modale .champs-formulaire{
 	width: 440px;
 }
+
 .modale .label-formulaire{
 	font-family: Work Sans;
 	font-size: 14px;
@@ -383,7 +390,10 @@ margin: 30px;
 
 
 /** Modale 1 Gallerie photo **/
-.bouton-fermer
+#modale1 .bouton-fermer{
+	display: flex;
+}
+
 .affichage-miniature{
 	margin-left: 40px;
 	margin-right: 40px;
@@ -394,6 +404,7 @@ margin: 30px;
 	padding-right:40px ;
 	margin: 30px;
 }
+
 .affichage-miniature{
 	display: flex;
 	flex-wrap: wrap;
@@ -408,14 +419,17 @@ margin: 30px;
 	width: 78.13;
 	
 }
+
 .fiche-miniature p{
 	margin-top: 5px;
 }
+
 .modale img{
 	
 	width: 78.12px;
 	height: 104.08px;
 }
+
 .ajouter-supprimer{
 	display: flex;
 	flex-direction: column;
