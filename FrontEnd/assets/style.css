@@ -394,6 +394,13 @@ margin: 30px;
 	padding-right:40px ;
 	margin: 30px;
 }
+.affichage-miniature{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 30px;
+	margin: 30px;
+}
 
 .fiche-miniature{
 	display: flex;
