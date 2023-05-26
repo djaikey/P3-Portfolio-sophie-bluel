@@ -126,6 +126,7 @@ function statutConnecte() {
     barreModification.classList.add("barre-modif");
     const labelModif = document.createElement("h3");
     labelModif.innerText = "Mode édition";
+    labelModif.classList.add("mode-edition");
     const boutonPublier = document.createElement("button");
     boutonPublier.innerText = "publier les changements";
     boutonPublier.type = "submit";

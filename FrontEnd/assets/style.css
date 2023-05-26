@@ -380,7 +380,10 @@ margin: 30px;
 	font-size: 14px;
 	font-weight: 500;
 }
+
+
 /** Modale 1 Gallerie photo **/
+.bouton-fermer
 .affichage-miniature{
 	margin-left: 40px;
 	margin-right: 40px;
@@ -423,6 +426,10 @@ margin: 30px;
 .retour-fermer{
 	display: flex;
 	justify-content: space-between;
+}
+.bouton-retour{
+	border: none;
+	background-color: #FFFEFF;
 }
 .inserer-photo{
 	width: 420px;

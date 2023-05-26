@@ -1,48 +1,46 @@
-function recuperationElements() {
+function affichageDesMiniature() {
   // Récupération elements du tableau travaux de l'API
 
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
     .then((projets) => {
+      console.log(projets);
       // informations fonctionnement affichage
 
-      console.log(projets);
       for (let i = 0; i < projets.length; i++) {
-        const element = projets[i];
+        const elements = projets[i];
+        console.log(elements);
 
-        if (element !== null) {
+        //Condition d'affichage
+        if (elements !== null) {
           // Choix de l'emplacement parent (balise qui accueui les fiches)
 
-          const affichageMiniatures = document.getElementById(
-            "affichage-miniature"
-          );
-
+          const miniatures = document.getElementById("affichage-miniature");
           // Création de l'affiçchage miniature
 
           // construction fiche miniature
 
           const ficheMiniature = document.createElement("div");
           ficheMiniature.classList.add("fiche-miniature");
+          console.log(ficheMiniature);
           // création emplacement et importation image
           const image = document.createElement("img");
-          image.src = element.imageUrl;
+          image.src = elements.imageUrl;
           image.classList.add = "image-miniature";
-
+          console.log(image);
           //choix éditer
 
           const editer = document.createElement("p");
           editer.innerText = "éditer";
           editer.classList.add = "editer";
-
+          console.log(editer);
           //rattahement
 
-          affichageMiniatures.appendChild(ficheMiniature);
           ficheMiniature.appendChild(image);
           ficheMiniature.appendChild(editer);
+          miniatures.appendChild(ficheMiniature);
         }
       }
     });
-
-  // information d'affichage filtrer
 }
-recuperationElements();
+affichageDesMiniature();
