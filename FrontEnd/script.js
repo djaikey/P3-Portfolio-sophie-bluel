@@ -124,7 +124,8 @@ function statutConnecte() {
     header.style.flexDirection = "column-reverse";
     const barreModification = document.createElement("div");
     barreModification.classList.add("barre-modif");
-    const labelModif = document.createElement("h3");
+    const labelModif = document.createElement("a");
+    labelModif.href.add = "#modale1";
     labelModif.innerText = "Mode édition";
     labelModif.classList.add("mode-edition");
     const boutonPublier = document.createElement("button");

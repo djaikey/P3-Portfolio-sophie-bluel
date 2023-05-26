@@ -4,12 +4,10 @@ function affichageDesMiniature() {
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
     .then((projets) => {
-      console.log(projets);
       // informations fonctionnement affichage
 
       for (let i = 0; i < projets.length; i++) {
         const elements = projets[i];
-        console.log(elements);
 
         //Condition d'affichage
         if (elements !== null) {
@@ -22,18 +20,18 @@ function affichageDesMiniature() {
 
           const ficheMiniature = document.createElement("div");
           ficheMiniature.classList.add("fiche-miniature");
-          console.log(ficheMiniature);
+
           // création emplacement et importation image
           const image = document.createElement("img");
           image.src = elements.imageUrl;
           image.classList.add = "image-miniature";
-          console.log(image);
+
           //choix éditer
 
-          const editer = document.createElement("p");
+          const editer = document.createElement("a");
           editer.innerText = "éditer";
           editer.classList.add = "editer";
-          console.log(editer);
+
           //rattahement
 
           ficheMiniature.appendChild(image);

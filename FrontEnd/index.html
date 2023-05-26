@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Sophie Bluel - Architecte d'intérieur</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+		rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="https://kit.fontawesome.com/746573b14e.js" crossorigin="anonymous"></script
@@ -42,11 +44,14 @@
 
 		<!-- Insertion modales-->
 
-		<div id="modale1" class="modale">
-			<button type="submit" class="bouton-fermer"><i class="fa-solid fa-xmark"></i></button>
+		<div id="modale1" class="modale" aria-hidden="true" role="dialog" aria-labelledby="titre-modale1">
+			
 			<div class="contenu-modale">
 				
-				<h2>Galerie photo</h2>
+				<div class="fermeture-modale">
+					<button type="submit" class="bouton-fermer"><i class="fa-solid fa-xmark"></i></button>
+				</div>
+				<h2 id="titre-modale1" >Galerie photo</h2>
 				<div id="affichage-miniature"class="affichage-miniature">
 					<!-- Affichage des travaux en format réduit JS-->
 				</div>
@@ -58,12 +63,14 @@
 			</div>
 		</div>
 		<div id="modale2" class="modale">
-			<div class="retour-fermer">
-				<button type="submit" class="bouton-retour"><i class="fa-solid fa-arrow-left"></i></i></button>	
-				<button type="submit" class="bouton-fermer"><i class="fa-solid fa-xmark"></i></button>	
-			</div>
+			
 			
 			<div class="contenu-modale">
+
+				<div class="retour-fermer">
+				<button type="submit" class="bouton-retour"><i class="fa-solid fa-arrow-left"></i></i></button>	
+				<button type="submit" class="bouton-fermer"><i class="fa-solid fa-xmark"></i></button>	
+				</div>
 				
 				<h2>Ajout photo</h2>
 				<div class="inserer-photo">
@@ -127,7 +134,8 @@
 	</nav>
 </footer>
 <script src="script.js"></script>
-<script src="Login.js"></script>
-<script src="modale.js"></script>
-</body>
+	<script src="Login.js"></script>
+	<script src="modale.js"></script>
+	</body>
+
 </html>
