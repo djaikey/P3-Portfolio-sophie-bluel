@@ -129,9 +129,14 @@ function statutConnecte() {
     labelModif.innerText = "Mode édition";
     labelModif.classList.add("mode-edition");
     const boutonPublier = document.createElement("button");
+
     boutonPublier.innerText = "publier les changements";
     boutonPublier.type = "submit";
     boutonPublier.classList.add("bouton-publier");
+    boutonPublier.addEventListener("click", (e) => {
+      const modale1 = document.getElementById("modale1");
+      modale1.style.display = "block";
+    });
     //Rattachement
 
     header.appendChild(barreModification);

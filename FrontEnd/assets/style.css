@@ -340,20 +340,19 @@ span {
 .modale{
 	width: 100%;
 	height: 100%;
-	
+	position: fixed;
 	padding: 0px;
 	margin: 0;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	
+	background-color: rgba(	0, 0, 0, 0.3);
 	
 }
 
 .contenu-modale{
 	max-width: 630px;
-	position: fixed;
+	margin: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

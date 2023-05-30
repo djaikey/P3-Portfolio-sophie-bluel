@@ -42,3 +42,32 @@ function affichageDesMiniature() {
     });
 }
 affichageDesMiniature();
+
+function fermerModale1() {
+  const modale1 = document.getElementById("modale1");
+  const boutonFermerModale1 = document.getElementById("fermer-modale1");
+  boutonFermerModale1.addEventListener("click", (e) => {
+    modale1.style.display = "none";
+  });
+}
+fermerModale1();
+
+function fermerModale2() {
+  const modale1 = document.getElementById("modale2");
+  const boutonFermerModale2 = document.getElementById("fermer-modale2");
+  boutonFermerModale2.addEventListener("click", (e) => {
+    modale1.style.display = "none";
+  });
+}
+fermerModale2();
+
+function ajouterPhoto() {
+  const modale2 = document.getElementById("modale2");
+  const boutonAjouterPhoto = document.getElementById("validation");
+  boutonAjouterPhoto.addEventListener("click", (e) => {
+    e.preventDefault;
+    modale2.style.display = "block";
+  });
+}
+
+ajouterPhoto();
