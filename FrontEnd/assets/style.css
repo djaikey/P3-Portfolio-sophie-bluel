@@ -339,14 +339,20 @@ span {
 }
 
 /** Modales**/
-
-.modale{
+.modales {
 	width: 100%;
 	height: 100%;
-	position: fixed;
+	
+}
+.modale{
+	
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% ,-50%);
 	padding: 0px;
 	margin: 0;
-	display: flex;
+	display: block;
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(	0, 0, 0, 0.3);

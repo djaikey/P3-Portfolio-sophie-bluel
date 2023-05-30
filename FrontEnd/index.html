@@ -28,7 +28,67 @@
 		</nav>
 	</div>
 </header>
+<div class="modales">
+
+		
+
+	<div  class="modale" id="modale1" aria-hidden="true" role="dialog" aria-labelledby="titre-modale1"style="display: none">
+		
+		<div class="contenu-modale"id="contenue-modale1">
+			
+			<div class="fermeture-modale">
+				<button type="submit" class="bouton-fermer" id="fermer-modale1"><i class="fa-solid fa-xmark"></i>fermer</button>
+			</div>
+			<h2 id="titre-modale1" >Galerie photo</h2>
+			<div id="affichage-miniature"class="affichage-miniature">
+				<!-- Affichage des travaux en format réduit JS-->
+			</div>
+			<div class="ajouter-supprimer">
+				<button type="submit" class="bouton-validation"id="validation" >Ajouter une photo</button>
+				<a id="supprimer">Supprimer la galerie</a>
+
+			</div>
+		</div>
+	</div>
+	<div id="modale2" class="modale" aria-hidden="true" role="dialog" style=display:none;>
+		
+		
+		<div class="contenu-modale">
+
+			<div class="retour-fermer">
+			<button type="submit" class="bouton-retour" id="retour"><i class="fa-solid fa-arrow-left"></i>retour</button>	
+			<button type="submit" class="bouton-fermer"id="fermer-modale2"><i class="fa-solid fa-xmark"></i>fermer</button>	
+			</div>
+			
+			<h2>Ajout photo</h2>
+			<div class="inserer-photo">
+				<div>
+					<i class="fa-solid fa-image"></i>
+				</div>
+				<button type="submit" class="bouton-validation" >+ Ajouter photo</button>	
+				<p>jpg,png. 4mo max</p>
+			</div>
+			<form class="formulaire-ajout">
+				<div class="label-champs">
+					<label for="titre" class="label-formulaire"><b>Titre</b></label>
+					<input type="text" name="titre" required class="champs-formulaire">
+				</div>
+				<div class="label-champs">
+					<label for="categorie" class="label-formulaire"><b>Categorie</b></label>
+					<select name="categories" id="liste-categories" class="champs-formulaire">
+						<option value="Champs-selection"></option>
+						<option value="objects">Objets</option>
+						<option value="appartements">Appartements</option>
+						<option value="hotels-restaurants">Hotel & Restaurants</option>
+					</select>
+				</div>
+			</form>
+			<button type="submit" name="Valider"id="valider-modale2" class="bouton-validation">Valider</button>
+
+		</div>
+	</div>
 <main>
+	
 	<section id="introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="">
@@ -42,65 +102,7 @@
 			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
 	</section>
-	<div class="modales">
-
-		
-
-		<div  class="modale" id="modale1" aria-hidden="true" role="dialog" aria-labelledby="titre-modale1"style="display: none">
-			
-			<div class="contenu-modale"id="contenue-modale1">
-				
-				<div class="fermeture-modale">
-					<button type="submit" class="bouton-fermer" id="fermer-modale1"><i class="fa-solid fa-xmark"></i>fermer</button>
-				</div>
-				<h2 id="titre-modale1" >Galerie photo</h2>
-				<div id="affichage-miniature"class="affichage-miniature">
-					<!-- Affichage des travaux en format réduit JS-->
-				</div>
-				<div class="ajouter-supprimer">
-					<button type="submit" class="bouton-validation"id="validation" >Ajouter une photo</button>
-					<a id="supprimer">Supprimer la galerie</a>
-
-				</div>
-			</div>
-		</div>
-		<div id="modale2" class="modale" aria-hidden="true" role="dialog" style=display:none;>
-			
-			
-			<div class="contenu-modale">
-
-				<div class="retour-fermer">
-				<button type="submit" class="bouton-retour" id="retour"><i class="fa-solid fa-arrow-left"></i>retour</button>	
-				<button type="submit" class="bouton-fermer"id="fermer-modale2"><i class="fa-solid fa-xmark"></i>fermer</button>	
-				</div>
-				
-				<h2>Ajout photo</h2>
-				<div class="inserer-photo">
-					<div>
-						<i class="fa-solid fa-image"></i>
-					</div>
-					<button type="submit" class="bouton-validation" >+ Ajouter photo</button>	
-					<p>jpg,png. 4mo max</p>
-				</div>
-				<form class="formulaire-ajout">
-					<div class="label-champs">
-						<label for="titre" class="label-formulaire"><b>Titre</b></label>
-						<input type="text" name="titre" required class="champs-formulaire">
-					</div>
-					<div class="label-champs">
-						<label for="categorie" class="label-formulaire"><b>Categorie</b></label>
-						<select name="categories" id="liste-categories" class="champs-formulaire">
-							<option value="Champs-selection"></option>
-							<option value="objects">Objets</option>
-							<option value="appartements">Appartements</option>
-							<option value="hotels-restaurants">Hotel & Restaurants</option>
-						</select>
-					</div>
-				</form>
-				<button type="submit" name="Valider"id="valider-modale2" class="bouton-validation">Valider</button>
-
-			</div>
-		</div>
+	
 	</div>
 	<section>
 
