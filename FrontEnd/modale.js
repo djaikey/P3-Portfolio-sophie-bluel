@@ -43,35 +43,68 @@ function affichageDesMiniature() {
 }
 affichageDesMiniature();
 
-function fermerModale1() {
+function ouvrirModale1() {
   const modale1 = document.getElementById("modale1");
-  const boutonFermerModale1 = document.getElementById("fermer-modale1");
-  boutonFermerModale1.addEventListener("click", (e) => {
-    modale1.style.display = "none";
-  });
+  modale1.style.display = "block";
+  modale1.removeAttribute("aria-hidden");
+  modale1.setAttribute("aria-modal", true);
+}
+
+function fermerModale1() {
+  modale1.style.display = "none";
+  modale1.removeAttribute("aria-hidden");
+  modale1.setAttribute("aria-modale", true);
+}
+function ouvrirModale2() {
+  modale2.style.display = "Block";
+  modale2.removeAttribute("aria-hidden");
+  modale2.setAttribute("aria-modal", true);
 }
 
 function fermerModale2() {
   const modale2 = document.getElementById("modale2");
-  const boutonFermerModale2 = document.getElementById("fermer-modale2");
-  boutonFermerModale2.addEventListener("click", (e) => {
-    modale2.style.display = "none";
-    modale1.style.display = "none";
-  });
-  const boutonRetour = document.getElementById("retour");
-  boutonRetour.addEventListener("click", (e) => {
-    modale2.style.display = "none";
-  });
+  modale2.style.display = "none";
+  modale2.removeAttribute("aria-modale");
+  modale2.setAttribute("aria-hidden", true);
+  modale1.style.display = "none";
+  modale1.removeAttribute("aria-modale");
+  modale1.setAttribute("aria-hidden", true);
 }
 
 function ajouterPhoto() {
   const boutonAjouterPhoto = document.getElementById("validation");
   boutonAjouterPhoto.addEventListener("click", (e) => {
     e.preventDefault;
-    modale2.style.display = "block";
+    ouvrirModale2();
+    fermerModale1();
+  });
+}
+function boutonFermerModale1(params) {
+  const boutonFermerModale1 = document.getElementById("fermer-modale1");
+  boutonFermerModale1.addEventListener("click", (e) => {
+    e.preventDefault;
+    fermerModale1();
   });
 }
 
+function boutonRetourModale2(params) {
+  const boutonRetour = document.getElementById("retour");
+  boutonRetour.addEventListener("click", (e) => {
+    e.preventDefault;
+    fermerModale2();
+    ouvrirModale1();
+  });
+}
+
+function boutonFermerModale2(params) {
+  const boutonFermerModale2 = document.getElementById("fermer-modale2");
+  boutonFermerModale2.addEventListener("click", (e) => {
+    e.preventDefault;
+    fermerModale1();
+    fermerModale2();
+  });
+}
+boutonFermerModale1();
 ajouterPhoto();
-fermerModale1();
-fermerModale2();
+boutonRetourModale2();
+boutonFermerModale2();

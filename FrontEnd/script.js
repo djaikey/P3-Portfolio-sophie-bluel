@@ -133,9 +133,13 @@ function statutConnecte() {
     boutonPublier.innerText = "publier les changements";
     boutonPublier.type = "submit";
     boutonPublier.classList.add("bouton-publier");
-    boutonPublier.addEventListener("click", (e) => {
+    const modifier = document.getElementById("modifier");
+    modifier.style.display = "block";
+    modifier.style.textDecoration = "none";
+    modifier.addEventListener("click", (e) => {
       const modale1 = document.getElementById("modale1");
       modale1.style.display = "block";
+      modale1.removeAttribute("aria-hidden");
     });
     //Rattachement
 

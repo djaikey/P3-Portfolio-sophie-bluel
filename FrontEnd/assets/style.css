@@ -148,6 +148,9 @@ li{
 li:hover {
 	color: #B1663C;
 }
+#modifier{
+	margin: 20px;
+}
 #introduction {
 	display: flex;
 	align-items: center;
