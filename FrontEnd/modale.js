@@ -43,6 +43,8 @@ function affichageDesMiniature() {
 }
 affichageDesMiniature();
 
+// ouvrir et fermer modale1
+
 function ouvrirModale1() {
   const modale1 = document.getElementById("modale1");
   modale1.style.display = "block";
@@ -55,6 +57,9 @@ function fermerModale1() {
   modale1.removeAttribute("aria-hidden");
   modale1.setAttribute("aria-modale", true);
 }
+
+//ouvrir fermer modale2
+
 function ouvrirModale2() {
   modale2.style.display = "Block";
   modale2.removeAttribute("aria-hidden");
@@ -66,9 +71,6 @@ function fermerModale2() {
   modale2.style.display = "none";
   modale2.removeAttribute("aria-modale");
   modale2.setAttribute("aria-hidden", true);
-  modale1.style.display = "none";
-  modale1.removeAttribute("aria-modale");
-  modale1.setAttribute("aria-hidden", true);
 }
 
 function ajouterPhoto() {
@@ -79,7 +81,7 @@ function ajouterPhoto() {
     fermerModale1();
   });
 }
-function boutonFermerModale1(params) {
+function boutonFermerModale1() {
   const boutonFermerModale1 = document.getElementById("fermer-modale1");
   boutonFermerModale1.addEventListener("click", (e) => {
     e.preventDefault;
@@ -87,7 +89,7 @@ function boutonFermerModale1(params) {
   });
 }
 
-function boutonRetourModale2(params) {
+function boutonRetourModale2() {
   const boutonRetour = document.getElementById("retour");
   boutonRetour.addEventListener("click", (e) => {
     e.preventDefault;
@@ -96,7 +98,7 @@ function boutonRetourModale2(params) {
   });
 }
 
-function boutonFermerModale2(params) {
+function boutonFermerModale2() {
   const boutonFermerModale2 = document.getElementById("fermer-modale2");
   boutonFermerModale2.addEventListener("click", (e) => {
     e.preventDefault;
