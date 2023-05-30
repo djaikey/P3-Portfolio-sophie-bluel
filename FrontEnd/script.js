@@ -136,11 +136,8 @@ function statutConnecte() {
     const modifier = document.getElementById("modifier");
     modifier.style.display = "block";
     modifier.style.textDecoration = "none";
-    modifier.addEventListener("click", (e) => {
-      const modale1 = document.getElementById("modale1");
-      modale1.style.display = "block";
-      modale1.removeAttribute("aria-hidden");
-    });
+    const modifierProjet = document.getElementById("modifier-projets");
+    modifierProjet.style.display = "block";
     //Rattachement
 
     header.appendChild(barreModification);
