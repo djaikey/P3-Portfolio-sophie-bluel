@@ -50,19 +50,21 @@ function fermerModale1() {
     modale1.style.display = "none";
   });
 }
-fermerModale1();
 
 function fermerModale2() {
-  const modale1 = document.getElementById("modale2");
+  const modale2 = document.getElementById("modale2");
   const boutonFermerModale2 = document.getElementById("fermer-modale2");
   boutonFermerModale2.addEventListener("click", (e) => {
+    modale2.style.display = "none";
     modale1.style.display = "none";
   });
+  const boutonRetour = document.getElementById("retour");
+  boutonRetour.addEventListener("click", (e) => {
+    modale2.style.display = "none";
+  });
 }
-fermerModale2();
 
 function ajouterPhoto() {
-  const modale2 = document.getElementById("modale2");
   const boutonAjouterPhoto = document.getElementById("validation");
   boutonAjouterPhoto.addEventListener("click", (e) => {
     e.preventDefault;
@@ -71,3 +73,5 @@ function ajouterPhoto() {
 }
 
 ajouterPhoto();
+fermerModale1();
+fermerModale2();
