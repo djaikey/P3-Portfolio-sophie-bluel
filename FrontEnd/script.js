@@ -138,6 +138,8 @@ function statutConnecte() {
     modifier.style.textDecoration = "none";
     const modifierProjet = document.getElementById("modifier-projets");
     modifierProjet.style.display = "block";
+    modifierProjet.style.textDecoration = "none";
+
     //Rattachement
 
     header.appendChild(barreModification);

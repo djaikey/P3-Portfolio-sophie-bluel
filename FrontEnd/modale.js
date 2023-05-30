@@ -73,6 +73,16 @@ function fermerModale2() {
   modale2.setAttribute("aria-hidden", true);
 }
 
+// interaction modale 1 et 2
+
+function modifcationProjets() {
+  const modifierProjets = document.getElementById("modifier-projets");
+  modifierProjets.addEventListener("click", (e) => {
+    e.preventDefault;
+    ouvrirModale1();
+  });
+}
+
 function ajouterPhoto() {
   const boutonAjouterPhoto = document.getElementById("validation");
   boutonAjouterPhoto.addEventListener("click", (e) => {
@@ -106,6 +116,7 @@ function boutonFermerModale2() {
     fermerModale2();
   });
 }
+modifcationProjets();
 boutonFermerModale1();
 ajouterPhoto();
 boutonRetourModale2();
