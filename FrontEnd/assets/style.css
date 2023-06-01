@@ -368,7 +368,7 @@ span {
 	display: block;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(	0, 0, 0, 0.3);
+	
 	
 }
 
@@ -509,6 +509,14 @@ margin: 30px;
 .inserer-photo p {
 display: flex;
 aligne-self: center;
+}
+.#file-upload-button {
+	width: 173px;
+height: 36px;
+left: 633px;
+top: 881px;
+background: #CBD6DC;
+border-radius: 50px;
 }
 
 

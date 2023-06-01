@@ -136,7 +136,9 @@ function statutConnecte() {
     const modifier = document.getElementById("modifier");
     modifier.style.display = "block";
     modifier.style.textDecoration = "none";
+    const modale1 = document.getElementsByClassName("modales");
     const modifierProjet = document.getElementById("modifier-projets");
+
     modifierProjet.style.display = "block";
     modifierProjet.style.textDecoration = "none";
 

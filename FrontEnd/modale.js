@@ -26,6 +26,8 @@ function affichageDesMiniature() {
           image.src = elements.imageUrl;
           image.classList.add = "image-miniature";
 
+          //icones poubelles
+
           //choix éditer
 
           const editer = document.createElement("a");
@@ -84,8 +86,8 @@ function modifcationProjets() {
 }
 
 function ajouterPhoto() {
-  const boutonAjouterPhoto = document.getElementById("validation");
-  boutonAjouterPhoto.addEventListener("click", (e) => {
+  const boutonAjouterPhotoModale1 = document.getElementById("validation");
+  boutonAjouterPhotoModale1.addEventListener("click", (e) => {
     e.preventDefault;
     ouvrirModale2();
     fermerModale1();
@@ -121,3 +123,14 @@ boutonFermerModale1();
 ajouterPhoto();
 boutonRetourModale2();
 boutonFermerModale2();
+
+//modale1
+/*modale2
+function boutonAjouterModale2() {
+  const boutonAjouterPhotoModale2 =
+    document.getElementById("file-upload-button");
+
+  boutonAjouterPhotoModale2.innerText = "+ Ajouter photo";
+}
+boutonAjouterPhotoModale2();
+*/
