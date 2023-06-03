@@ -119,11 +119,27 @@ function statutConnecte() {
   // Condition
 
   if (token != null) {
+    // si le token n'est pas null
+
+    //suppression de l'option Login
     login.style.display = "none";
+
+    //choix de l'emplacemet de la bare de modification
+
     const header = document.querySelector("header");
+
+    // invertion de l'affichage de la barre de modification et de la nav
     header.style.flexDirection = "column-reverse";
+
+    //création de la barre de modification
     const barreModification = document.createElement("div");
     barreModification.classList.add("barre-modif");
+
+    // icone modification
+
+    const iconeModifier = document.createElement("i");
+    iconeModifier.classList = "fa-solid fa-pen-to-square";
+
     const labelModif = document.createElement("a");
     labelModif.href.add = "#modale1";
     labelModif.innerText = "Mode édition";
@@ -145,6 +161,7 @@ function statutConnecte() {
     //Rattachement
 
     header.appendChild(barreModification);
+    barreModification.appendChild(iconeModifier);
     barreModification.appendChild(labelModif);
     barreModification.appendChild(boutonPublier);
   } else {

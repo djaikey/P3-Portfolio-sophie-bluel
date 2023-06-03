@@ -458,7 +458,15 @@ margin: 30px;
 	width: 78.13;
 	
 }
-
+ #icone-poubelle{
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: last baseline;
+	
+ }
 .fiche-miniature p{
 	margin-top: 5px;
 }

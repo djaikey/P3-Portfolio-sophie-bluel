@@ -21,8 +21,20 @@ function identification() {
 }
 identification();
 
-function suprimer() {
+function suppression() {
   fetch("http://localhost:5678/api/works/1${id}", { method: "DELETE" }).then(
     () => {}
   );
 }
+
+/* addEventListener ne fonctionne pas (ToT)
+
+function actionSuprimer() {
+  iconeDelete.addEventListener("click", (e) => {
+    e.preventDefault;
+    alert("click");
+  });
+}
+actionSuprimer();
+
+*/

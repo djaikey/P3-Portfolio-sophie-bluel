@@ -22,11 +22,11 @@ function affichageDesMiniature() {
           ficheMiniature.classList.add("fiche-miniature");
 
           // creation de l'icône poubelle
-          const iconeEffacer = document.createElement("button");
+          const iconeEffacer = document.createElement("i");
           iconeEffacer.setAttribute("id", "icone-poubelle");
-          iconeEffacer.value = elements.id;
-          iconeEffacer.classList.add("icone-effacer");
-          iconeEffacer.innerText = "Delete";
+          iconeEffacer.classList = "fa-solid fa-trash-can";
+          iconeEffacer.style.color = "#ffffff";
+          iconeEffacer.style.backgroundColor = "black";
 
           // création emplacement et importation image
           const image = document.createElement("img");
