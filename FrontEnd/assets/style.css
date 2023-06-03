@@ -494,7 +494,7 @@ margin: 30px;
 	border: none;
 	background-color: #FFFEFF;
 }
-.inserer-photo{
+#section-ajout{
 	width: 420px;
 	height: 169px;
 	padding: 10px;
@@ -507,23 +507,10 @@ margin: 30px;
 
 }
 .inserer-photo p {
-display: flex;
-aligne-self: center;
-}
-.#file-upload-button {
-	width: 173px;
-height: 36px;
-left: 633px;
-top: 881px;
-background: #CBD6DC;
-border-radius: 50px;
+	display: flex;
+	aligne-self: center;
 }
 
-
-.inserer-photo .bouton-validation{
-	background-color:#CBD6DC ;
-	color: #306685;
-}
 
 .formulaire-ajout{
 	width: 440px;
