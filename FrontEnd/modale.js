@@ -21,6 +21,16 @@ function affichageDesMiniature() {
           const ficheMiniature = document.createElement("div");
           ficheMiniature.classList.add("fiche-miniature");
 
+          const icones = document.createElement("div");
+          icones.classList.add("icones-fiche-miniature");
+
+          //icone deplacement =>> voir affichage hover
+
+          const iconeDeplacer = document.createElement("i");
+          iconeDeplacer.classList = "fa-solid fa-arrows-up-down-left-right";
+          iconeDeplacer.setAttribute("id", "icone-deplacer");
+          iconeDeplacer.style.color = "transparent";
+
           // creation de l'icône poubelle
           const iconeEffacer = document.createElement("i");
           iconeEffacer.setAttribute("id", "icone-poubelle");
@@ -42,7 +52,9 @@ function affichageDesMiniature() {
           editer.classList.add = "editer";
 
           //rattahement
-          ficheMiniature.appendChild(iconeEffacer);
+          icones.appendChild(iconeDeplacer);
+          icones.appendChild(iconeEffacer);
+          ficheMiniature.appendChild(icones);
           ficheMiniature.appendChild(image);
           ficheMiniature.appendChild(editer);
           miniatures.appendChild(ficheMiniature);

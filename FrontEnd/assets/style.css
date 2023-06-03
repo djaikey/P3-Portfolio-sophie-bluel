@@ -458,15 +458,32 @@ margin: 30px;
 	width: 78.13;
 	
 }
+
+.icones-fiche-miniature{
+	display: flex;
+	justify-content: space-between;
+	
+}
  #icone-poubelle{
 	width: 20px;
 	height: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	align-self: last baseline;
 	
- }
+}
+
+#icone-deplacer{
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#icone-deplacer :hover {
+	color: #FFFEFF;
+	background-color: #000000;
+}
 .fiche-miniature p{
 	margin-top: 5px;
 }
