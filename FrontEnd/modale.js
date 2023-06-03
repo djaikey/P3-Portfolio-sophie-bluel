@@ -21,6 +21,13 @@ function affichageDesMiniature() {
           const ficheMiniature = document.createElement("div");
           ficheMiniature.classList.add("fiche-miniature");
 
+          // creation de l'icône poubelle
+          const iconeEffacer = document.createElement("button");
+          iconeEffacer.setAttribute("id", "icone-poubelle");
+          iconeEffacer.value = elements.id;
+          iconeEffacer.classList.add("icone-effacer");
+          iconeEffacer.innerText = "Delete";
+
           // création emplacement et importation image
           const image = document.createElement("img");
           image.src = elements.imageUrl;
@@ -35,7 +42,7 @@ function affichageDesMiniature() {
           editer.classList.add = "editer";
 
           //rattahement
-
+          ficheMiniature.appendChild(iconeEffacer);
           ficheMiniature.appendChild(image);
           ficheMiniature.appendChild(editer);
           miniatures.appendChild(ficheMiniature);

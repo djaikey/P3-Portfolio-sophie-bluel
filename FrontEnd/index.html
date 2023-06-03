@@ -61,19 +61,28 @@
 			<button type="submit" class="bouton-fermer"id="fermer-modale2"><i class="fa-solid fa-xmark"></i></button>	
 			</div>
 			
+			
 			<h2>Ajout photo</h2>
 			<form class="formulaire-ajout" method="post" enctype="multipart/form-data">
 				
-				<input class="inserer-photo"type="file"name="ajouter-photo"accept= "image/pgn, image/jpeg"> 
-				
-				</input>
+				<div id="section-ajout">
+					<button id="bouton-ajout" name="ajouter-photo" >+ Ajouter photo
+					</button>
+					<input class="inserer-photo"type="file"name="ajouter-photo"accept= "image/pgn, image/jpeg" ;
+					;"></input>
+					
+					
+					<p>jpg, png. 4mo max</p>
+					
+
+				</div>			
 			
 				<div class="label-champs">
 					<label for="titre" class="label-formulaire"><b>Titre</b></label>
 					<input type="text" name="titre" required class="champs-formulaire">
 				</div>
 				<div class="label-champs">
-					<label for="categorie" class="label-formulaire"><b>Categorie</b></label>
+					<label for="categorie" class="label-formulaire" id="champs-titre"><b>Categorie</b></label>
 					<select name="categories" id="liste-categories" class="champs-formulaire">
 						<option value="Champs-selection"></option>
 						<option value="objects">Objets</option>
@@ -82,7 +91,7 @@
 					</select>
 				</div>
 			</form>
-			<button type="submit" name="Valider"id="valider-modale2" class="bouton-validation">Valider</button>
+			<input type="submit" name="Valider"id="valider-modale2" class="bouton-validation" value="Ajouter"</button>
 
 		</div>
 	</div>
@@ -157,7 +166,7 @@
 	<script src="Login.js"></script>
 	<script src="modale.js"></script>
 	<script src="delet.js"></script>
-	<script src="Create.js"></script>
+	<!-- <script src="Create.js"></script>-->
 	</body>
 
 </html>
