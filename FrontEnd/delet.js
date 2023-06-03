@@ -22,9 +22,11 @@ function identification() {
 identification();
 
 function suppression() {
-  fetch("http://localhost:5678/api/works/1${id}", { method: "DELETE" }).then(
-    () => {}
-  );
+  if (id == iconeDelete.value) {
+    fetch("http://localhost:5678/api/works/1${id}", { method: "DELETE" }).then(
+      () => {}
+    );
+  }
 }
 
 /* addEventListener ne fonctionne pas (ToT)
