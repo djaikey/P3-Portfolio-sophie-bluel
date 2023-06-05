@@ -30,7 +30,6 @@ function affichageDesMiniature() {
           const iconeDeplacer = document.createElement("i");
           iconeDeplacer.classList = "fa-solid fa-arrows-up-down-left-right";
           iconeDeplacer.setAttribute("id", "icone-deplacer");
-          iconeDeplacer.style.color = "transparent";
 
           // creation de l'icône poubelle
           const iconeEffacer = document.createElement("i");
