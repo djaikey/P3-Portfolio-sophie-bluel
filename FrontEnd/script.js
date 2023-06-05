@@ -139,6 +139,7 @@ function statutConnecte() {
 
     const iconeModifier = document.createElement("i");
     iconeModifier.classList = "fa-solid fa-pen-to-square";
+    iconeModifier.setAttribute("id", "icone-modifier");
 
     const labelModif = document.createElement("a");
     labelModif.href.add = "#modale1";

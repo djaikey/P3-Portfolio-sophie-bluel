@@ -14,6 +14,7 @@ function affichageDesMiniature() {
           // Choix de l'emplacement parent (balise qui accueui les fiches)
 
           const miniatures = document.getElementById("affichage-miniature");
+
           // Création de l'affiçchage miniature
 
           // construction fiche miniature

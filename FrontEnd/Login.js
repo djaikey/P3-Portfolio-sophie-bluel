@@ -30,9 +30,9 @@ formulaire.addEventListener("submit", (event) => {
       return response.json();
     })
 
-    // Si data.token est retourné
-
     .then((data) => {
+      // Si data.token est retourné
+
       if (data.token) {
         // Stockage du token dans localstorage
 
