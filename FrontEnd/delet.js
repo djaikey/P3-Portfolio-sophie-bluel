@@ -1,8 +1,3 @@
-const gallerie = document.getElementsByClassName("gallery");
-const affichageMiniature = document.getElementsByClassName(
-  "affichage-miniature"
-);
-
 const iconeDelete = document.getElementsByClassName("icone-effacer");
 
 function identification() {
@@ -22,21 +17,22 @@ function identification() {
 identification();
 
 function suppression() {
-  if (id == iconeDelete.value) {
-    fetch("http://localhost:5678/api/works/1${id}", { method: "DELETE" }).then(
-      () => {}
-    );
-  }
-}
+  const gallerie = document.getElementsByClassName("gallery");
+  const miniatures = document.getElementsByClassName("affichage-miniature");
 
-/* addEventListener ne fonctionne pas (ToT)
-
-function actionSuprimer() {
-  iconeDelete.addEventListener("click", (e) => {
-    e.preventDefault;
-    alert("click");
+  fetch("http://localhost:5678/api/works/${id}", {
+    method: "DELETE",
+  }).then(() => {
+    miniatures.innerHTML = "";
+    gallerie.innerHTML = "";
   });
 }
-actionSuprimer();
 
-*/
+function supprimer() {
+  // non fonctionnel
+  iconeDelete.addEventListener("click", (e) => {
+    e.preventDefault;
+    suppression();
+  });
+}
+supprimer();
