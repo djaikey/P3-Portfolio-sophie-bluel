@@ -1,5 +1,7 @@
 const iconeDelete = document.getElementsByClassName("icone-effacer");
 
+// Assiganation de l'Id aux iconnes de suppression
+
 function identification() {
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
@@ -16,6 +18,8 @@ function identification() {
 }
 identification();
 
+// action de supression
+
 function suppression() {
   const gallerie = document.getElementsByClassName("gallery");
   const miniatures = document.getElementsByClassName("affichage-miniature");
@@ -28,11 +32,13 @@ function suppression() {
   });
 }
 
-function supprimer() {
-  // non fonctionnel
+// Evenement au click
+/*
+function supprimer() {   // non fonctionnel
   iconeDelete.addEventListener("click", (e) => {
     e.preventDefault;
     suppression();
   });
 }
 supprimer();
+*/
