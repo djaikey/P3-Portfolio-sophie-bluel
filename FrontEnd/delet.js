@@ -1,8 +1,12 @@
-const iconeDelete = document.getElementsByClassName("icone-effacer");
-
 // Assiganation de l'Id aux iconnes de suppression
 
 function identification() {
+  // choix de l'élément
+
+  const iconeDelete = document.getElementsByClassName("icone-effacer");
+
+  //fetche GET projets
+
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
     .then((projets) => {
@@ -11,8 +15,16 @@ function identification() {
 
         const id = elements.id;
 
-        iconeDelete.value = id;
-        console.log(iconeDelete.value);
+        //attribution de l'id comme valeure de l'icone delete
+        const boutonSupprimer = document.getElementById("bouton-supprimer");
+        boutonSupprimer.value = id;
+        console.log(boutonSupprimer.value);
+
+        // Evenement au click
+        boutonSupprimer.addEventListener("click", (e) => {
+          e.preventDefault;
+          console.log("click");
+        });
       }
     });
 }
@@ -24,21 +36,9 @@ function suppression() {
   const gallerie = document.getElementsByClassName("gallery");
   const miniatures = document.getElementsByClassName("affichage-miniature");
 
-  fetch("http://localhost:5678/api/works/${id}", {
-    method: "DELETE",
-  }).then(() => {
+  if (iconeDelete.value == id) {
+    fetch("DELETE", "http://localhost:5678/api/works/${id}");
     miniatures.innerHTML = "";
     gallerie.innerHTML = "";
-  });
+  }
 }
-
-// Evenement au click
-/*
-function supprimer() {   // non fonctionnel
-  iconeDelete.addEventListener("click", (e) => {
-    e.preventDefault;
-    suppression();
-  });
-}
-supprimer();
-*/

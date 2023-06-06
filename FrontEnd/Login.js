@@ -25,7 +25,7 @@ formulaire.addEventListener("submit", (event) => {
       //Si la réponse n'est pas ok
 
       if (!response.ok) {
-        throw new Error("Erreur dans l’identifiant ou le mot de passe");
+        throw new Error("Erreur d’identifiant ou de mot de passe");
       }
       return response.json();
     })

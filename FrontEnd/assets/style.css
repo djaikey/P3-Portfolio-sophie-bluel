@@ -450,6 +450,7 @@ margin: 30px;
 	padding: 20px 30px 20px 30px;
 }
 
+
 .affichage-miniature{
 	margin-left: 40px;
 	margin-right: 40px;
@@ -469,6 +470,7 @@ margin: 30px;
 	display: flex;
 	flex-direction: column;
 	width: 78.13;
+	box-sizing: border-box;
 	
 }
 
@@ -477,6 +479,16 @@ margin: 30px;
 	justify-content: space-between;
 	
 }
+
+
+#bouton-supprimer{
+	display: flex;
+	justify-content: center;
+	max-width: 21px;
+	padding: 0;
+	color: transparent;
+	border: none;
+}
  #icone-poubelle{
 	width: 20px;
 	height: 20px;
@@ -484,22 +496,32 @@ margin: 30px;
 	justify-content: center;
 	align-items: center;
 	
+	
 }
 
+#bouton-deplacer {
+	
+	justify-content: center;
+	width: 21px;
+	padding: 0;
+	color: transparent;
+	border: none;
+	background-color: transparent;
+	
+}
+#bouton-deplacer :hover{
+	color: #000000;
+}
 #icone-deplacer{
 	width: 20px;
 	height: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: transparent;
+	background-color: tr;
 }
-#icone-deplacer :hover {  // ne fonctionne pas
-	color: #FFFEFF;
-	background-color: #000000;
-}
-.fiche-miniature p{
-	margin-top: 5px;
-}
+
 
 .modale img{
 	

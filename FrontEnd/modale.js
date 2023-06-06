@@ -25,11 +25,18 @@ function affichageDesMiniature() {
           const icones = document.createElement("div");
           icones.classList.add("icones-fiche-miniature");
 
-          //icone deplacement =>> voir affichage hover
+          //bouton icone deplacement =>
 
+          const boutonDeplacer = document.createElement("button");
+          boutonDeplacer.setAttribute("id", "bouton-deplacer");
           const iconeDeplacer = document.createElement("i");
           iconeDeplacer.classList = "fa-solid fa-arrows-up-down-left-right";
           iconeDeplacer.setAttribute("id", "icone-deplacer");
+
+          // creation du boutton de suppression
+          const boutonSuprimmer = document.createElement("button");
+          boutonSuprimmer.classList.add("bouton-delete");
+          boutonSuprimmer.setAttribute("id", "bouton-supprimer");
 
           // creation de l'icône poubelle
           const iconeEffacer = document.createElement("i");
@@ -52,8 +59,10 @@ function affichageDesMiniature() {
           editer.classList.add = "editer";
 
           //rattahement
-          icones.appendChild(iconeDeplacer);
-          icones.appendChild(iconeEffacer);
+          icones.appendChild(boutonDeplacer);
+          boutonDeplacer.appendChild(iconeDeplacer);
+          icones.appendChild(boutonSuprimmer);
+          boutonSuprimmer.appendChild(iconeEffacer);
           ficheMiniature.appendChild(icones);
           ficheMiniature.appendChild(image);
           ficheMiniature.appendChild(editer);
