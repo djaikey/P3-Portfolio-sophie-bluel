@@ -1,6 +1,7 @@
 function affichageDesMiniature() {
   // Récupération elements du tableau travaux de l'API
-
+  const miniatures = document.getElementById("affichage-miniature");
+  miniatures.innerHTML = "";
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
     .then((projets) => {
@@ -12,8 +13,6 @@ function affichageDesMiniature() {
         //Condition d'affichage
         if (elements !== null) {
           // Choix de l'emplacement parent (balise qui accueui les fiches)
-
-          const miniatures = document.getElementById("affichage-miniature");
 
           // Création de l'affiçchage miniature
 
@@ -36,11 +35,10 @@ function affichageDesMiniature() {
           // creation du boutton de suppression
           const boutonSuprimmer = document.createElement("button");
           boutonSuprimmer.classList.add("bouton-delete");
-          boutonSuprimmer.setAttribute("id", "bouton-supprimer");
+          boutonSuprimmer.setAttribute("id", elements.id);
 
           // creation de l'icône poubelle
           const iconeEffacer = document.createElement("i");
-          iconeEffacer.setAttribute("id", "icone-poubelle");
           iconeEffacer.classList = "fa-solid fa-trash-can";
           iconeEffacer.style.color = "#ffffff";
           iconeEffacer.style.backgroundColor = "black";

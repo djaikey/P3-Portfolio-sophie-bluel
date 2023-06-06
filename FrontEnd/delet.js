@@ -1,9 +1,32 @@
+const miniatures = document.querySelector(".affichage-miniature");
+miniatures.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.closest(".bouton-delete")) {
+    const jaiCliqueIci = e.target.closest(".bouton-delete");
+    const IDClique = jaiCliqueIci.id;
+    suppression(IDClique);
+  }
+});
+//attribution de l'id comme valeure de l'icone delete
+const boutonSupprimer = document.getElementsByClassName(".bouton-delete");
+console.log(boutonSupprimer);
+
+console.log(boutonSupprimer);
+
+// Evenement au click
+/*
+boutonSupprimer.addEventListener("click", (e) => {
+  e.preventDefault;
+  console.log("click");
+});
+*/
+
 // Assiganation de l'Id aux iconnes de suppression
 
 function identification() {
   // choix de l'élément
 
-  const iconeDelete = document.getElementsByClassName("icone-effacer");
+  const iconeDelete = document.getElementsByClassName("fa-solid fa-trash-can");
 
   //fetche GET projets
 
@@ -14,31 +37,31 @@ function identification() {
         const elements = projets[i];
 
         const id = elements.id;
-
-        //attribution de l'id comme valeure de l'icone delete
-        const boutonSupprimer = document.getElementById("bouton-supprimer");
-        boutonSupprimer.value = id;
-        console.log(boutonSupprimer.value);
-
-        // Evenement au click
-        boutonSupprimer.addEventListener("click", (e) => {
-          e.preventDefault;
-          console.log("click");
-        });
       }
     });
 }
-identification();
 
 // action de supression
 
-function suppression() {
-  const gallerie = document.getElementsByClassName("gallery");
-  const miniatures = document.getElementsByClassName("affichage-miniature");
-
-  if (iconeDelete.value == id) {
-    fetch("DELETE", "http://localhost:5678/api/works/${id}");
-    miniatures.innerHTML = "";
-    gallerie.innerHTML = "";
-  }
+function suppression(IDClique) {
+  const token = localStorage.getItem("token");
+  console.log(token);
+  fetch(`http://localhost:5678/api/works/${IDClique}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  })
+    .then((reponse) => {
+      if (reponse.status == 204) {
+        alert("c'est ok!!!");
+      } else {
+        alert("noooooon!");
+      }
+    })
+    .catch((ERROR) => {
+      alert(ERROR);
+    });
 }
