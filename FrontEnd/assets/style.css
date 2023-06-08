@@ -375,7 +375,7 @@ span {
 	position:absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50% ,%);
+	transform: translate(-50% ,+10%);
 	padding: 0px;
 	margin: 0;
 	display: block;
@@ -481,12 +481,15 @@ margin: 30px;
 }
 
 
-#bouton-supprimer{
+.bouton-delete{
 	display: flex;
 	justify-content: center;
-	max-width: 21px;
+	align-items: center;
+	width: 17px;
+	height: 17px;
 	padding: 0;
-	color: transparent;
+	color: #FFFFFF;
+	background-color: #000000;
 	border: none;
 }
  #icone-poubelle{
@@ -500,7 +503,6 @@ margin: 30px;
 }
 
 #bouton-deplacer {
-	
 	justify-content: center;
 	width: 21px;
 	padding: 0;
