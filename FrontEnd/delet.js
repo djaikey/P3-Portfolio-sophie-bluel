@@ -37,6 +37,7 @@ function suppression(idDuBouton) {
     .then((reponse) => {
       if (reponse.status == 204) {
         miniatures.innerHTML = "";
+        affichageDesMiniature();
       } else {
         alert("Erreur dans la suppretion du projet");
       }

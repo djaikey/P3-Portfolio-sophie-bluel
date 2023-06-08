@@ -74,10 +74,12 @@ affichageDesMiniature();
 // ouvrir et fermer modale1
 
 function ouvrirModale1() {
+  //const fondModales = document.querySelector(".modales");
   const modale1 = document.getElementById("modale1");
   modale1.style.display = "block";
   modale1.removeAttribute("aria-hidden");
   modale1.setAttribute("aria-modal", true);
+  //fondModales.style.display = "block";
 }
 
 function fermerModale1() {

@@ -29,9 +29,8 @@
 	</div>
 </header>
 
-	<!-- ANNULE LA FONCTION AFFICHAGE DE LA MODALE
-<div class="modales" style="display: none;">
-	ANNULE LA FONCTION AFFICHAGE DE LA MODALE-->		
+	
+
 
 	<div  class="modale" id="modale1" aria-hidden="true" role="dialog" aria-labelledby="titre-modale1"style="display: none">
 		
@@ -68,9 +67,12 @@
 				<div id="section-ajout">
 
 					<i class="fa-solid fa-image" id="icone-image"></i>
+
 					
-					<input class="inserer-photo"type="file"name="ajouter-photo"accept= "image/pgn, image/jpeg" ;
-					;"></input>
+					
+					<!--<img src="#" alt="" id="image" style="max-width: 129;max-height: 193px; margin-top: 20px;" >-->
+					<input class="inserer-photo"type="file"name="image" accept= "image/pgn, image/jpeg" onchange="preveiewPicture(this)" required  ;
+					;" >
 					
 					
 					<p>jpg, png. 4mo max</p>
@@ -79,26 +81,28 @@
 				</div>			
 			
 				<div class="label-champs">
-					<label for="titre" class="label-formulaire"><b>Titre</b></label>
-					<input type="text" name="titre" required class="champs-formulaire">
+					<label for="titre" class="label-formulaire" ><b>Titre</b></label>
+					<input id="titre" type="text" name="titre" required class="champs-formulaire" required >
 				</div>
 				<div class="label-champs">
-					<label for="categorie" class="label-formulaire" id="champs-titre"><b>Categorie</b></label>
-					<select name="categories" id="liste-categories" class="champs-formulaire">
+					<label for="categorie"id="champs-titre" class="label-formulaire" ><b>Categorie</b></label>
+					<select name="categorie" id="liste-categories" class="champs-formulaire"type="text" required>
 						<option value="Champs-selection"></option>
 						<option value="objects">Objets</option>
 						<option value="appartements">Appartements</option>
 						<option value="hotels-restaurants">Hotel & Restaurants</option>
 					</select>
 				</div>
+				
+				<input type="submit" name="Valider"id="valider-modale2" class="bouton-validation" value="Ajouter"</button>
 			</form>
-			<input type="submit" name="Valider"id="valider-modale2" class="bouton-validation" value="Ajouter"</button>
+			
 
 		</div>
 	</div>
-	<!-- ANNULE LA FONCTION AFFICHAGE DE LA MODALE
-</div>
-ANNULE LA FONCTION AFFICHAGE DE LA MODALEANNULE LA FONCTION AFFICHAGE DE LA MODALE -->
+
+	<!--<div class="modales" style="display: none;"</div Fonds des modales Changer placement pour fermer modales-->
+
 <main>
 	
 	<section id="introduction">
@@ -167,7 +171,7 @@ ANNULE LA FONCTION AFFICHAGE DE LA MODALEANNULE LA FONCTION AFFICHAGE DE LA MODA
 	<script src="Login.js"></script>
 	<script src="modale.js"></script>
 	<script src="delet.js"></script>
-	<!-- <script src="Create.js"></script>-->
+	<script src="Create.js"></script>
 	</body>
 
 </html>

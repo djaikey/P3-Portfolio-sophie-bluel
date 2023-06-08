@@ -570,17 +570,14 @@ margin: 30px;
 	align-items: center;
 
 }
-#icone-image{
-	width: 58px;
-	height: 46px;
+.fa-image::before{
+	
 	
 	display: flex;
 	justify-self: center;
 	align-self: center;
 }
-.inserer-photo{
-color: transparent;
-}
+
 .inserer-photo p {
 	display: flex;
 	aligne-self: center;
