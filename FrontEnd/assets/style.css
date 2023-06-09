@@ -559,8 +559,10 @@ margin: 30px;
 	background-color: #FFFEFF;
 }
 #section-ajout{
-	width: 420px;
-	height: 169px;
+	width: 100%;
+	min-width: 420px;
+	height: 100%;
+	min-height: 169px;
 	padding: 10px;
 	border-radius: 3px;
 	background-color:#E8F1F6 ;
@@ -571,8 +573,7 @@ margin: 30px;
 
 }
 .fa-image::before{
-	
-	
+
 	display: flex;
 	justify-self: center;
 	align-self: center;
@@ -583,7 +584,25 @@ margin: 30px;
 	aligne-self: center;
 }
 
+#bouton-ajouter-photo{
+height: 36px;
+width: 173px;
+left: 633px;
+top: 881px;
+border: none;
+border-radius: 50px;
+background: #CBD6DC;
+font-family: Work Sans ;
+font-size: 14px;
+font-weight: 500;
+color: rgba(48, 102, 133, 1);
 
+
+
+text-align: center;
+
+
+}
 .formulaire-ajout{
 	width: 440px;
 	display: flex;
