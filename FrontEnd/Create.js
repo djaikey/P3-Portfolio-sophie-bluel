@@ -1,19 +1,35 @@
-function validerFormulaire() {
+function importerPhoto() {
+  const imagePrevew = document.getElementById("image");
+  imagePrevew.style.display = "none";
   const champsImage = document.querySelector(".inserer-photo");
+  const BoutonAjouterPhoto = document.getElementById("bouton-ajouter-photo");
+  BoutonAjouterPhoto.addEventListener("click", (e) => {
+    e.preventDefault(), 
+
+   const formData = new FormData() ;
+    formData.append("inserer-photo",champsImage.files[0]);
+    console.log(champsImage.files);
+  });
+}
+importerPhoto();
+
+function validerFormulaire() {
   const ChampsTitre = document.getElementById("titre");
   const selectionCategorie = document.getElementById("liste-categories");
   const valider = document.getElementById("valider-modale2");
-  const imageUrl = champsImage.value;
+  
+
+  /*
   const titre = ChampsTitre.value;
-  const categorie = selectionCategorie.value;
+  const categorie = selectionCategorie.value;*/
+
   valider.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log(imageUrl + titre + categorie);
 
     const response = fetch("http://localhost:5678/api/works", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ imageUrl, titre, categorie }),
+      body://valeurs attendues ,
     }).then((response) => {
       if (!response.status == 201) {
         alert("Création du projet effectué");
