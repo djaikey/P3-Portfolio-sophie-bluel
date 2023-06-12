@@ -65,19 +65,14 @@
 			<form class="formulaire-ajout" method="post" enctype="multipart/form-data">
 				
 				<div id="section-ajout">
-
+					<!-- Prévisualisation de l'image importée-->
+					<img src="" alt="" id="image-prev" ;" >
 					<i class="fa-solid fa-image" id="icone-image"></i>
-					<img src="#" alt="" id="image" style="max-width: 129;max-height: 193px; margin-top: 20px;" >
 					
-					<form>
-					<input class="inserer-photo"type="file"name="image" accept= "image/pgn, image/jpeg" onchange="preveiewPicture(this)" required  ;
-					;" ><br>
-					<button type="submit" id="bouton-ajouter-photo"> + Ajouter </button></form>
-					
-					
-					
+					<label for="selectioner" id="bouton-ajouter-photo"> + Ajouter </label>
+					<input type="file" id="selectioner" accept= "image/*"required onechange="previsualisation(event)  ;" ><br>
+	
 					<p>jpg, png. 4mo max</p>
-					
 
 				</div>			
 			

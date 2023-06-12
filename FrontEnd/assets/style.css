@@ -583,12 +583,16 @@ margin: 30px;
 	display: flex;
 	aligne-self: center;
 }
-
+#section-ajout input {
+	display: none;
+}
+#image-prev {
+	display: none;
+}
 #bouton-ajouter-photo{
 height: 36px;
 width: 173px;
-left: 633px;
-top: 881px;
+padding-top: 15px;
 border: none;
 border-radius: 50px;
 background: #CBD6DC;
@@ -596,19 +600,16 @@ font-family: Work Sans ;
 font-size: 14px;
 font-weight: 500;
 color: rgba(48, 102, 133, 1);
-
-
-
 text-align: center;
-
-
 }
+
 .formulaire-ajout{
 	width: 440px;
 	display: flex;
 	flex-direction: column;
 	justify-items: center;
 }
+
 #valider-modale2{
 	background-color:#A7A7A7 ;
 	height: 36px;
