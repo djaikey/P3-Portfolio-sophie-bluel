@@ -1,4 +1,5 @@
-const selectionFichier = document.getElementById("selectioner");
+const token = localStorage.getItem("token");
+
 function preview() {
   // image selectioner
 
@@ -26,31 +27,28 @@ function validationFormulaire() {
 
   valider.addEventListener("click", (e) => {
     e.preventDefault();
-
+    const selectionFichier = document.getElementById("selectioner").files[0];
     const titre = ChampsTitre.value;
     const categorie = champsCategorie.value;
 
-    console.log(selectionFichier.value);
+    console.log(selectionFichier);
     console.log(titre);
     console.log(categorie);
 
-    /*if ((titre, true)) {
-      console.log(titre);
-    }
-    if ((categorie, true)) {
-      console.log(categorie);
-    } else {
-      alert("infos manquantes");
-    }*/
+    let formData = new FormData();
+    formData.append("image", selectionFichier);
+    formData.append("title", titre);
+    formData.append("category", 1);
 
-    /*const envoie = fetch("http://localhost:5678/api/works", {
+    fetch("http://localhost:5678/api/works", {
       method: "POST",
-      accept: application/json
-      Autorization: Bearer (token)
-      headers: { "Content-Type": "multipart/form-data" },
-      body: JSON.stringify({ titre, categorie / token (files ou blob)}),
-      (files/ image =>titre =>categorie)
-    });*/
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+      body: formData,
+    }).catch((error) => {
+      console.error(error);
+    });
   });
 }
 validationFormulaire();
