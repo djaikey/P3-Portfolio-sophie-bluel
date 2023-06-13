@@ -1,74 +1,56 @@
-function previsualisation(event) {
-  if (event.files.length > 0) {
-    let src = URL.createObjectURL(event.target.files[0]);
-    let imagePrevew = document.getElementById("image-prev");
-    imagePrevew.src = src;
-    imagePrevew.style.display = "block";
-  }
-}
-previsualisation();
-/*
-function validerFormulaire() {
-  const ChampsTitre = document.getElementById("titre");
-  const selectionCategorie = document.getElementById("liste-categories");
-  const valider = document.getElementById("valider-modale2");
-  
+const selectionFichier = document.getElementById("selectioner");
+function preview() {
+  // image selectioner
 
-  /*
-  const titre = ChampsTitre.value;
-  const categorie = selectionCategorie.value;
+  // prévisualisation de l'image
+  const previsualisation = document.getElementById("image-prev");
+  // bouton ajouter
+  const boutonAjouter = document.getElementById("bouton-ajouter-photo");
+  boutonAjouter.addEventListener("click", (e) => {
+    console.log("Click");
+    // récupération de l'objet
+    //création d'un URL à l'objet
+    //previsualisation.src = URL.createObjectURL(selectionFichier.value); ne fonctionne pas
+    // affichage de l'image selectionner
+    previsualisation.style.display = "block";
+  });
+}
+preview();
+
+function validationFormulaire() {
+  const ChampsTitre = document.getElementById("titre");
+
+  const champsCategorie = document.getElementById("liste-categories");
+
+  const valider = document.getElementById("valider-modale2");
 
   valider.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const response = fetch("http://localhost:5678/api/works", {
+    const titre = ChampsTitre.value;
+    const categorie = champsCategorie.value;
+
+    console.log(selectionFichier.value);
+    console.log(titre);
+    console.log(categorie);
+
+    /*if ((titre, true)) {
+      console.log(titre);
+    }
+    if ((categorie, true)) {
+      console.log(categorie);
+    } else {
+      alert("infos manquantes");
+    }*/
+
+    /*const envoie = fetch("http://localhost:5678/api/works", {
       method: "POST",
-      headers: {
-      "Content-Type": "application/json" },
-      body://valeurs attendues ,
-    }).then((response) => {
-      if (!response.status == 201) {
-        alert("Création du projet effectué");
-      }
-      if (!response.status == 400) {
-        alert("Mauvaise demande");
-      }
-      if (!response.status == 401) {
-        alert("Non autorisé");
-      }
-      if (!response.status == 500) {
-        alert("Erreur inattendue");
-      }
-    });
-    //console.log(image.value + titre.value + categorie.value);
+      accept: application/json
+      Autorization: Bearer (token)
+      headers: { "Content-Type": "multipart/form-data" },
+      body: JSON.stringify({ titre, categorie / token (files ou blob)}),
+      (files/ image =>titre =>categorie)
+    });*/
   });
 }
-validerFormulaire();*/
-
-/*
-valider.addEventListener("click", (e) => {
-  e.preventDefault(), console.log(photo + titre + categorie);
-});
-valider.addEventListener("submit", (event) => {
-    event.preventDefault(); // Empêche l'envoi du formulaire par défaut
-
-    alert("click");
-  });*/
-/*
-valider.addEventListener("submit", (event) => {
-  event.preventDefault(); // Empêche l'envoi du formulaire par défaut
-
-  
-  // Envoi des données d'identification à l'API pour vérification
-
-  
-    //Reponses post identification
-
-    .then((response) => {
-      //Si la réponse n'est pas ok
-
-     
-      return response.json();
-    });
-
-  });*/
+validationFormulaire();
