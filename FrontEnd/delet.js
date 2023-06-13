@@ -8,14 +8,6 @@ miniatures.addEventListener("click", (e) => {
   if (e.target.closest(".bouton-delete")) {
     const emplacementClick = e.target.closest(".bouton-delete");
     const idDuBouton = emplacementClick.id;
-
-    /*/test button
-    console.log("suprimé" + idDuBouton);
-    
-  }
-  //test button
-  */
-
     //declaration de la fonction suppression
     suppression(idDuBouton);
   }
