@@ -154,13 +154,13 @@ function boutonFermerModale2() {
   });
 }
 
-window.addEventListener("mousemove", (e) => {
-  console.log(e.target);
+document.onclick = (event) => {
+  console.log(event.target.value);
+  window.addEventListener("mousemove", (e) => {
+    console.log(e.target);
+  });
+};
 
-  document.onclick = (event) => {
-    console.log(event.target.value + e.target);
-  };
-});
 function clickDehors() {}
 clickDehors();
 
