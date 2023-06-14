@@ -155,10 +155,8 @@ function boutonFermerModale2() {
 }
 
 document.onclick = (event) => {
-  console.log(event.target.value);
-  window.addEventListener("mousemove", (e) => {
-    console.log(e.target);
-  });
+  const elementClique = event.target;
+  console.log(elementClique);
 };
 
 function clickDehors() {}
