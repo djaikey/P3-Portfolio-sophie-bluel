@@ -153,6 +153,17 @@ function boutonFermerModale2() {
     fermerModale2();
   });
 }
+
+window.addEventListener("mousemove", (e) => {
+  console.log(e.target);
+
+  document.onclick = (event) => {
+    console.log(event.target.value + e.target);
+  };
+});
+function clickDehors() {}
+clickDehors();
+
 modifcationProjets();
 boutonFermerModale1();
 ajouterPhoto();
