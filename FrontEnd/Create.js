@@ -1,20 +1,10 @@
 const token = localStorage.getItem("token");
 
 function preview() {
+  const previsualisation
   // image selectioner
-
   // prévisualisation de l'image
-  const previsualisation = document.getElementById("image-prev");
   // bouton ajouter
-  const boutonAjouter = document.getElementById("bouton-ajouter-photo");
-  boutonAjouter.addEventListener("click", (e) => {
-    console.log("Click");
-    // récupération de l'objet
-    //création d'un URL à l'objet
-    //previsualisation.src = URL.createObjectURL(selectionFichier.value); ne fonctionne pas
-    // affichage de l'image selectionner
-    previsualisation.style.display = "block";
-  });
 }
 preview();
 
@@ -49,6 +39,20 @@ function validationFormulaire() {
     }).catch((error) => {
       console.error(error);
     });
+    if (selectionFichier == undefined) {
+      alert("Veuillez choisir une image");
+      return;
+    }
+    if (titre == "") {
+      alert("Veuillez définir un titre");
+      return;
+    }
+    if (categorie == "Champs-selection") {
+      alert("Veuillez selectionner une catégorie");
+      return;
+    } else {
+      alert("Envoie du projet en cours");
+    }
   });
 }
 validationFormulaire();

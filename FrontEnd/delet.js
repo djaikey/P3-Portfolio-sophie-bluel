@@ -10,6 +10,7 @@ miniatures.addEventListener("click", (e) => {
     const idDuBouton = emplacementClick.id;
     //declaration de la fonction suppression
     suppression(idDuBouton);
+    affichageDesMiniature();
   }
 });
 
