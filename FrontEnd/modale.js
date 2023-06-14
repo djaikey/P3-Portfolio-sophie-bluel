@@ -79,7 +79,6 @@ function ouvrirModale1() {
   modale1.style.display = "block";
   modale1.removeAttribute("aria-hidden");
   modale1.setAttribute("aria-modal", true);
-  //fondModales.style.display = "block";
 }
 
 function fermerModale1() {
@@ -103,7 +102,7 @@ function fermerModale2() {
   modale2.setAttribute("aria-hidden", true);
 }
 
-// interaction modale 1 et 2
+//  Le clique sur Modifier Ouvre la modale 1
 
 function modifcationProjets() {
   const modifierProjets = document.getElementById("modifier-projets");
@@ -113,6 +112,8 @@ function modifcationProjets() {
   });
 }
 
+// Le bouton Ajouter une photo Ouvre la modale 2 et ferme la modale 1
+
 function ajouterPhoto() {
   const boutonAjouterPhotoModale1 = document.getElementById("validation");
   boutonAjouterPhotoModale1.addEventListener("click", (e) => {
@@ -121,6 +122,9 @@ function ajouterPhoto() {
     fermerModale1();
   });
 }
+
+// Le bouton fermer modale 1
+
 function boutonFermerModale1() {
   const boutonFermerModale1 = document.getElementById("fermer-modale1");
   boutonFermerModale1.addEventListener("click", (e) => {
@@ -128,6 +132,8 @@ function boutonFermerModale1() {
     fermerModale1();
   });
 }
+
+// le bouton retour de la modale 2 ferme la modale 2 et ouvre la modale 1
 
 function boutonRetourModale2() {
   const boutonRetour = document.getElementById("retour");
@@ -138,11 +144,12 @@ function boutonRetourModale2() {
   });
 }
 
+// le bouton fermer de la modale 2 ferme la modale 2
+
 function boutonFermerModale2() {
   const boutonFermerModale2 = document.getElementById("fermer-modale2");
   boutonFermerModale2.addEventListener("click", (e) => {
     e.preventDefault;
-    fermerModale1();
     fermerModale2();
   });
 }
@@ -151,14 +158,3 @@ boutonFermerModale1();
 ajouterPhoto();
 boutonRetourModale2();
 boutonFermerModale2();
-
-//modale1
-/*modale2
-function boutonAjouterModale2() {
-  const boutonAjouterPhotoModale2 =
-    document.getElementById("file-upload-button");
-
-  boutonAjouterPhotoModale2.innerText = "+ Ajouter photo";
-}
-boutonAjouterPhotoModale2();
-*/

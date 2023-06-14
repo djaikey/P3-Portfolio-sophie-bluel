@@ -1,7 +1,8 @@
 const token = localStorage.getItem("token");
 
 function preview() {
-  const previsualisation
+  // if (selectionFichier !== null) {
+  //}
   // image selectioner
   // prévisualisation de l'image
   // bouton ajouter
@@ -28,7 +29,7 @@ function validationFormulaire() {
     let formData = new FormData();
     formData.append("image", selectionFichier);
     formData.append("title", titre);
-    formData.append("category", 1);
+    formData.append("category", categorie);
 
     fetch("http://localhost:5678/api/works", {
       method: "POST",

@@ -11,6 +11,7 @@ formulaire.addEventListener("submit", (event) => {
 
   const email = champsEmail.value;
   const password = champsMotDePasse.value;
+  console.log(password);
 
   // Envoi des données d'identification à l'API pour vérification
 
