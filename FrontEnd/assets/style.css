@@ -362,17 +362,19 @@ span {
 .modales {
 	width: 100%;
 	height: 100%;
-	display: block;
-    z-index: 30;
-    background-color: #00000030;
+	background-color: #00000030;
     position: fixed;
     left: 0;
     top: 0;
+	display: none;
+	
+	
 	
 }
+
 .modale{
 	
-	position:absolute;
+	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50% ,+10%);
@@ -381,6 +383,7 @@ span {
 	display: block;
 	justify-content: center;
 	align-items: center;
+	z-index: 1;
 	
 	
 }
@@ -396,6 +399,7 @@ span {
 	box-sizing: border-box;
 	overflow: auto;
 	border-radius: 10px;
+	
 }
 
 .bouton-fermer{
@@ -458,8 +462,8 @@ margin: 30px;
 	flex-wrap: wrap;
 	justify-content: justify;
 	gap: 10px;
-	padding: 0;
-	margin: 80px;
+	padding: 0px;
+	margin: 40px;
 	padding-bottom:50px;
 	border-bottom: solid 1px  #B3B3B3;
 }
@@ -471,12 +475,15 @@ margin: 30px;
 	flex-direction: column;
 	width: 78.13;
 	box-sizing: border-box;
-	
+	padding: 10px;
 }
 
 .icones-fiche-miniature{
 	display: flex;
-	justify-content: space-between;
+	justify-content: right;
+	gap: 2px;
+	position: absolute;
+	align-self: flex-end;
 	
 }
 
@@ -492,14 +499,13 @@ margin: 30px;
 	background-color: #000000;
 	border: none;
 }
+
  #icone-poubelle{
 	width: 20px;
 	height: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	
 }
 
 #bouton-deplacer {
@@ -509,11 +515,12 @@ margin: 30px;
 	color: transparent;
 	border: none;
 	background-color: transparent;
-	
 }
+
 #bouton-deplacer :hover{
 	color: #000000;
 }
+
 #icone-deplacer{
 	width: 20px;
 	height: 20px;
@@ -558,6 +565,7 @@ margin: 30px;
 	border: none;
 	background-color: #FFFEFF;
 }
+
 #section-ajout{
 	width: 100%;
 	min-width: 420px;
@@ -572,6 +580,7 @@ margin: 30px;
 	align-items: center;
 
 }
+
 .fa-image::before{
 
 	display: flex;
@@ -583,12 +592,15 @@ margin: 30px;
 	display: flex;
 	aligne-self: center;
 }
+
 #section-ajout input {
 	display: none;
 }
+
 #image-prev {
 	display: none;
 }
+
 #bouton-ajouter-photo{
 height: 36px;
 width: 173px;

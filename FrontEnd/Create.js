@@ -1,13 +1,8 @@
 const token = localStorage.getItem("token");
 
-function preview() {
-  // if (selectionFichier !== null) {
-  //}
-  // image selectioner
-  // prévisualisation de l'image
-  // bouton ajouter
-}
-preview();
+//preview image
+
+// preview image
 
 function validationFormulaire() {
   const ChampsTitre = document.getElementById("titre");
@@ -19,6 +14,7 @@ function validationFormulaire() {
   valider.addEventListener("click", (e) => {
     e.preventDefault();
     const selectionFichier = document.getElementById("selectioner").files[0];
+
     const titre = ChampsTitre.value;
     const categorie = champsCategorie.value;
 
@@ -42,15 +38,12 @@ function validationFormulaire() {
     });
     if (selectionFichier == undefined) {
       alert("Veuillez choisir une image");
-      return;
     }
     if (titre == "") {
       alert("Veuillez définir un titre");
-      return;
     }
     if (categorie == "Champs-selection") {
       alert("Veuillez selectionner une catégorie");
-      return;
     } else {
       alert("Envoie du projet en cours");
     }

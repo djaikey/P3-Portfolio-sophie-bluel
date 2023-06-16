@@ -1,3 +1,4 @@
+overlay = document.querySelector(".modales");
 function affichageDesMiniature() {
   // Récupération elements du tableau travaux de l'API
   const miniatures = document.getElementById("affichage-miniature");
@@ -74,7 +75,6 @@ affichageDesMiniature();
 // ouvrir et fermer modale1
 
 function ouvrirModale1() {
-  //const fondModales = document.querySelector(".modales");
   const modale1 = document.getElementById("modale1");
   modale1.style.display = "block";
   modale1.removeAttribute("aria-hidden");
@@ -109,6 +109,7 @@ function modifcationProjets() {
   modifierProjets.addEventListener("click", (e) => {
     e.preventDefault;
     ouvrirModale1();
+    overlay.style.display = "block";
   });
 }
 
@@ -120,6 +121,7 @@ function ajouterPhoto() {
     e.preventDefault;
     ouvrirModale2();
     fermerModale1();
+    overlay.style.display = "block";
   });
 }
 
@@ -130,6 +132,7 @@ function boutonFermerModale1() {
   boutonFermerModale1.addEventListener("click", (e) => {
     e.preventDefault;
     fermerModale1();
+    overlay.style.display = "none";
   });
 }
 
@@ -141,6 +144,7 @@ function boutonRetourModale2() {
     e.preventDefault;
     fermerModale2();
     ouvrirModale1();
+    overlay.style.display = "block";
   });
 }
 
@@ -151,12 +155,18 @@ function boutonFermerModale2() {
   boutonFermerModale2.addEventListener("click", (e) => {
     e.preventDefault;
     fermerModale2();
+    overlay.style.display = "none";
   });
 }
 
 document.onclick = (event) => {
   const elementClique = event.target;
-  console.log(elementClique);
+
+  if (event.target == overlay) {
+    fermerModale1();
+    fermerModale2();
+    overlay.style.display = "none";
+  }
 };
 
 function clickDehors() {}

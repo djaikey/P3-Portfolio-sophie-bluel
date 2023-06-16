@@ -4,13 +4,12 @@ miniatures.addEventListener("click", (e) => {
   e.preventDefault();
 
   // Assiganation de l'Id aux bouton de suppression
-
   if (e.target.closest(".bouton-delete")) {
     const emplacementClick = e.target.closest(".bouton-delete");
     const idDuBouton = emplacementClick.id;
     //declaration de la fonction suppression
+
     suppression(idDuBouton);
-    miniatures.innerHTML = "";
     affichageDesMiniature();
   }
 });
@@ -19,6 +18,8 @@ miniatures.addEventListener("click", (e) => {
 
 function suppression(idDuBouton) {
   const token = localStorage.getItem("token");
+
+  console.log(idDuBouton);
 
   fetch(`http://localhost:5678/api/works/${idDuBouton}`, {
     method: "DELETE",
@@ -30,7 +31,7 @@ function suppression(idDuBouton) {
   })
     .then((reponse) => {
       if (reponse.status == 204) {
-        miniatures.innerHTML = "";
+        alert("Suppression du Projet");
       } else {
         alert("Erreur dans la suppretion du projet");
       }
