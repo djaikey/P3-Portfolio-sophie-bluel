@@ -142,7 +142,7 @@ function statutConnecte() {
     iconeModifier.setAttribute("id", "icone-modifier");
 
     const labelModif = document.createElement("a");
-    labelModif.href.add = "#modale1";
+
     labelModif.innerText = "Mode édition";
     labelModif.classList.add("mode-edition");
     const boutonPublier = document.createElement("button");

@@ -51,8 +51,6 @@ function validationFormulaire() {
     }
     if (categorie == "Champs-selection") {
       alert("Veuillez selectionner une catégorie");
-    } else {
-      alert("Envoie du projet en cours");
     }
   });
 }

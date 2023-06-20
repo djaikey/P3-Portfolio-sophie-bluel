@@ -10,7 +10,7 @@ miniatures.addEventListener("click", (e) => {
     //declaration de la fonction suppression
 
     suppression(idDuBouton);
-    affichageDesMiniature();
+    //affichageDesMiniature();
   }
 });
 
@@ -31,9 +31,9 @@ function suppression(idDuBouton) {
   })
     .then((reponse) => {
       if (reponse.status == 204) {
-        alert("Suppression du Projet");
+        console.log("Suppression du Projet");
       } else {
-        alert("Erreur dans la suppretion du projet");
+        alert("Erreur dans la suppression du projet");
       }
     })
     .catch((ERROR) => {
