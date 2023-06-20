@@ -28,6 +28,8 @@ formulaire.addEventListener("submit", (event) => {
         throw new Error("Erreur d’identifiant ou de mot de passe");
       }
       return response.json();
+
+      // message d'erreur mauvais mot de pass
     })
 
     .then((data) => {
