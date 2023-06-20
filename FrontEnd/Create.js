@@ -1,8 +1,16 @@
-const token = localStorage.getItem("token");
+const selectionFichier = document.getElementById("selectioner").files[0];
 
-//preview image
-
-// preview image
+function previewPictrure() {
+  const sectionPrev = document.getElementById("image-prev");
+  const boutonAjouter = document.getElementById("bouton-ajouter-photo");
+  boutonAjouter.addEventListener("click", (e) => {
+    console.log("click");
+    const prevImage = document.createElement("img");
+    // image.src = URL.createObjectURL(selectionFichier);
+    sectionPrev.appendChild(prevImage);
+  });
+}
+previewPictrure();
 
 function validationFormulaire() {
   const ChampsTitre = document.getElementById("titre");
@@ -13,7 +21,6 @@ function validationFormulaire() {
 
   valider.addEventListener("click", (e) => {
     e.preventDefault();
-    const selectionFichier = document.getElementById("selectioner").files[0];
 
     const titre = ChampsTitre.value;
     const categorie = champsCategorie.value;
@@ -50,3 +57,29 @@ function validationFormulaire() {
   });
 }
 validationFormulaire();
+// Preview de l'image importée
+
+// Preview de l'image importée
+/*
+let previewPictrure = function (e) {
+  const emplacementPrev = document.querySelector(".image-prev");
+  //Recupération de l'image
+
+  if (selectionFichier.files) {
+    // Creation de l'image
+
+    const prevImage = document.createElement("img");
+
+    // Attribution de l'URL du a l'image prev
+
+    prevImage.src = URL.createObjectURL(selectionFichier);
+    console.log(prevImage.src);
+
+    // Rattachement de l'image
+
+    emplacementPrev.appendChild(prevImage);
+  }
+};
+
+previewPictrure();
+*/

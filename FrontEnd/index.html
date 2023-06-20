@@ -82,7 +82,8 @@
 					<i class="fa-solid fa-image" id="icone-image"></i>
 
 					<label for="selectioner" id="bouton-ajouter-photo"> + Ajouter </label>
-					<input type="file" id="selectioner" accept="image/jpg image/png" required ;"><br>
+					<input type="file" id="selectioner" accept="image/jpg image/png" "
+						required ;"><br>
 
 					<p>jpg, png. 4mo max</p>
 
@@ -90,11 +91,11 @@
 
 				<div class="label-champs">
 					<label for="titre" class="label-formulaire"><b>Titre</b></label>
-					<input id="titre" type="text" name="titre" class="champs-formulaire">
+					<input id="titre" type="text" name="titre" class="champs-formulaire" required>
 				</div>
 				<div class="label-champs">
 					<label for="categorie" id="champs-titre" class="label-formulaire"><b>Categorie</b></label>
-					<select name="categorie" id="liste-categories" class="champs-formulaire" type="text">
+					<select name="categorie" id="liste-categories" class="champs-formulaire" type="text" required>
 						<option value="Champs-selection"></option>
 						<option value="1">Objets</option>
 						<option value="2">Appartements</option>
