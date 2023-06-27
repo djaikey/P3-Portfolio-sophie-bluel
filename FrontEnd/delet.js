@@ -1,3 +1,4 @@
+const token = localStorage.getItem("token");
 const miniatures = document.querySelector(".affichage-miniature");
 //event click dans l'affichage miniature
 miniatures.addEventListener("click", (e) => {
@@ -10,7 +11,8 @@ miniatures.addEventListener("click", (e) => {
     //declaration de la fonction suppression
 
     suppression(idDuBouton);
-    //affichageDesMiniature();
+    affichageDesMiniature();
+    recuperationTravaux();
   }
 });
 
