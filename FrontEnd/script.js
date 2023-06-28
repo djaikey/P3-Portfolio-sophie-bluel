@@ -61,6 +61,7 @@ function recuperationTravaux(filtre = "tous") {
     .then((reponse) => reponse.json())
     .then((travaux) => {
       // informations fonctionnement affichage
+
       if (filtre == "tous") {
         affichage(travaux);
 
@@ -69,8 +70,10 @@ function recuperationTravaux(filtre = "tous") {
         const filtrage = travaux.filter(function (afichageFiltrer) {
           return afichageFiltrer.category.name === filtre;
         });
-        affichage(filtrage);
+
         //appel de la fonction affichage avec fitrage pour argument
+
+        affichage(filtrage);
       }
     });
 }
@@ -116,7 +119,7 @@ function statutConnecte() {
   const token = localStorage.getItem("token");
   const login = document.getElementById("login");
 
-  // Condition
+  // Condition du statut connecté
 
   if (token != null) {
     // si le token n'est pas null
@@ -141,15 +144,22 @@ function statutConnecte() {
     iconeModifier.classList = "fa-solid fa-pen-to-square";
     iconeModifier.setAttribute("id", "icone-modifier");
 
-    const labelModif = document.createElement("a");
+    // label modifier
+
+    const labelModif = document.createElement("p");
 
     labelModif.innerText = "Mode édition";
     labelModif.classList.add("mode-edition");
     const boutonPublier = document.createElement("button");
 
+    // Création d'un bouton publier
+
     boutonPublier.innerText = "publier les changements";
     boutonPublier.type = "submit";
     boutonPublier.classList.add("bouton-publier");
+
+    //apparition des optionde modification
+
     const modifier = document.getElementById("modifier");
     modifier.style.display = "block";
     modifier.style.textDecoration = "none";
@@ -166,12 +176,14 @@ function statutConnecte() {
     barreModification.appendChild(labelModif);
     barreModification.appendChild(boutonPublier);
   } else {
+    // si le statut n'est pas connecté
+
     logout.style.display = "none";
     login.style.display = "block";
   }
 }
 statutConnecte();
-// Action logout déconnection via logout
+
 function seDeconnecter() {
   //selection de l'élement declancheur
 
