@@ -1,6 +1,8 @@
+overlay = document.querySelector(".modales");
 function affichageDesMiniature() {
   // Récupération elements du tableau travaux de l'API
-
+  const miniatures = document.getElementById("affichage-miniature");
+  miniatures.innerHTML = "";
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
     .then((projets) => {
@@ -13,13 +15,34 @@ function affichageDesMiniature() {
         if (elements !== null) {
           // Choix de l'emplacement parent (balise qui accueui les fiches)
 
-          const miniatures = document.getElementById("affichage-miniature");
           // Création de l'affiçchage miniature
 
           // construction fiche miniature
 
           const ficheMiniature = document.createElement("div");
           ficheMiniature.classList.add("fiche-miniature");
+
+          const icones = document.createElement("div");
+          icones.classList.add("icones-fiche-miniature");
+
+          //bouton icone deplacement =>
+
+          const boutonDeplacer = document.createElement("button");
+          boutonDeplacer.setAttribute("id", "bouton-deplacer");
+          const iconeDeplacer = document.createElement("i");
+          iconeDeplacer.classList = "fa-solid fa-arrows-up-down-left-right";
+          iconeDeplacer.setAttribute("id", "icone-deplacer");
+
+          // creation du boutton de suppression
+          const boutonSuprimmer = document.createElement("button");
+          boutonSuprimmer.classList.add("bouton-delete");
+          boutonSuprimmer.setAttribute("id", elements.id);
+
+          // creation de l'icône poubelle
+          const iconeEffacer = document.createElement("i");
+          iconeEffacer.classList = "fa-solid fa-trash-can";
+          iconeEffacer.style.color = "#ffffff";
+          iconeEffacer.style.backgroundColor = "black";
 
           // création emplacement et importation image
           const image = document.createElement("img");
@@ -35,7 +58,11 @@ function affichageDesMiniature() {
           editer.classList.add = "editer";
 
           //rattahement
-
+          icones.appendChild(boutonDeplacer);
+          boutonDeplacer.appendChild(iconeDeplacer);
+          icones.appendChild(boutonSuprimmer);
+          boutonSuprimmer.appendChild(iconeEffacer);
+          ficheMiniature.appendChild(icones);
           ficheMiniature.appendChild(image);
           ficheMiniature.appendChild(editer);
           miniatures.appendChild(ficheMiniature);
@@ -75,15 +102,18 @@ function fermerModale2() {
   modale2.setAttribute("aria-hidden", true);
 }
 
-// interaction modale 1 et 2
+//  Le clique sur Modifier Ouvre la modale 1
 
 function modifcationProjets() {
   const modifierProjets = document.getElementById("modifier-projets");
   modifierProjets.addEventListener("click", (e) => {
     e.preventDefault;
     ouvrirModale1();
+    overlay.style.display = "block";
   });
 }
+
+// Le bouton Ajouter une photo Ouvre la modale 2 et ferme la modale 1
 
 function ajouterPhoto() {
   const boutonAjouterPhotoModale1 = document.getElementById("validation");
@@ -91,15 +121,22 @@ function ajouterPhoto() {
     e.preventDefault;
     ouvrirModale2();
     fermerModale1();
+    overlay.style.display = "block";
   });
 }
+
+// Le bouton fermer modale 1
+
 function boutonFermerModale1() {
   const boutonFermerModale1 = document.getElementById("fermer-modale1");
   boutonFermerModale1.addEventListener("click", (e) => {
     e.preventDefault;
     fermerModale1();
+    overlay.style.display = "none";
   });
 }
+
+// le bouton retour de la modale 2 ferme la modale 2 et ouvre la modale 1
 
 function boutonRetourModale2() {
   const boutonRetour = document.getElementById("retour");
@@ -107,30 +144,36 @@ function boutonRetourModale2() {
     e.preventDefault;
     fermerModale2();
     ouvrirModale1();
+    overlay.style.display = "block";
   });
 }
+
+// le bouton fermer de la modale 2 ferme la modale 2
 
 function boutonFermerModale2() {
   const boutonFermerModale2 = document.getElementById("fermer-modale2");
   boutonFermerModale2.addEventListener("click", (e) => {
     e.preventDefault;
-    fermerModale1();
     fermerModale2();
+    overlay.style.display = "none";
   });
 }
+
+document.onclick = (event) => {
+  const elementClique = event.target;
+
+  if (event.target == overlay) {
+    fermerModale1();
+    fermerModale2();
+    overlay.style.display = "none";
+  }
+};
+
+function clickDehors() {}
+clickDehors();
+
 modifcationProjets();
 boutonFermerModale1();
 ajouterPhoto();
 boutonRetourModale2();
 boutonFermerModale2();
-
-//modale1
-/*modale2
-function boutonAjouterModale2() {
-  const boutonAjouterPhotoModale2 =
-    document.getElementById("file-upload-button");
-
-  boutonAjouterPhotoModale2.innerText = "+ Ajouter photo";
-}
-boutonAjouterPhotoModale2();
-*/
