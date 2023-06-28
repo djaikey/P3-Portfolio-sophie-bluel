@@ -3,7 +3,9 @@ const valider = document.getElementById("valider-modale2");
 function previewPictrure() {
   const sectionPrev = document.getElementById("image-prev");
   const inputImage = document.getElementById("selectioner");
+  const iconeImage = document.getElementById("icone-image");
   inputImage.addEventListener("change", (e) => {
+    iconeImage.style.display = "none";
     sectionPrev.innerHTML = "";
     const prevImage = document.createElement("img");
     let selectionFichier = document.getElementById("selectioner").files[0];
