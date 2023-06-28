@@ -31,6 +31,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+a{
+	text-decoration: none;
+}
 
 .login-body{
 width: 1440px;
@@ -597,7 +600,20 @@ margin: 30px;
 	display: none;
 }
 
-
+#icone-image {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 58px;
+	height: 58px;
+	margin: 5px;
+	padding-left: 3px;
+	padding-right:3px ;
+	
+	background-color: #CBD6DC;
+	color:#E8F1F6 ;
+	font-size: 60px;
+}
 
 #bouton-ajouter-photo{
 height: 36px;
@@ -621,9 +637,11 @@ text-align: center;
 }
 
 #valider-modale2{
+	display: flex;
+	justify-self: center;
+	align-self: center;
 	background-color:#A7A7A7 ;
 	height: 36px;
 	width: 237px;
-	display: flex;
-	
+
 }
