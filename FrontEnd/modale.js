@@ -1,4 +1,4 @@
-overlay = document.querySelector(".modales");
+const overlay = document.querySelector(".modales");
 function affichageDesMiniature() {
   // Récupération elements du tableau travaux de l'API
   const miniatures = document.getElementById("affichage-miniature");
@@ -13,8 +13,6 @@ function affichageDesMiniature() {
 
         //Condition d'affichage
         if (elements !== null) {
-          // Choix de l'emplacement parent (balise qui accueui les fiches)
-
           // Création de l'affiçchage miniature
 
           // construction fiche miniature
@@ -44,12 +42,10 @@ function affichageDesMiniature() {
           iconeEffacer.style.color = "#ffffff";
           iconeEffacer.style.backgroundColor = "black";
 
-          // création emplacement et importation image
+          // création et importation image
           const image = document.createElement("img");
           image.src = elements.imageUrl;
           image.classList.add = "image-miniature";
-
-          //icones poubelles
 
           //choix éditer
 
@@ -168,9 +164,6 @@ document.onclick = (event) => {
     overlay.style.display = "none";
   }
 };
-
-function clickDehors() {}
-clickDehors();
 
 modifcationProjets();
 boutonFermerModale1();

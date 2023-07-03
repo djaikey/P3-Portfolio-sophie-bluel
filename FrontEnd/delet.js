@@ -16,12 +16,10 @@ miniatures.addEventListener("click", (e) => {
   }
 });
 
-// action de supression
+// Reqète de supression API
 
 function suppression(idDuBouton) {
   const token = localStorage.getItem("token");
-
-  console.log(idDuBouton);
 
   fetch(`http://localhost:5678/api/works/${idDuBouton}`, {
     method: "DELETE",

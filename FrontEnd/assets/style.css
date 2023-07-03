@@ -362,6 +362,8 @@ span {
 
 
 /** Modales**/
+
+/** Overlay**/
 .modales {
 	width: 100%;
 	height: 100%;
@@ -370,9 +372,7 @@ span {
     left: 0;
     top: 0;
 	display: none;
-	
-	
-	
+
 }
 
 .modale{

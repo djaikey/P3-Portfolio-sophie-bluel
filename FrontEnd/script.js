@@ -24,7 +24,8 @@ function recuperationCategories() {
 
       // Evenement au clique
 
-      boutonTous.addEventListener("click", () => {
+      boutonTous.addEventListener("click", (e) => {
+        e.preventDefault();
         recuperationTravaux();
       });
 
@@ -42,7 +43,8 @@ function recuperationCategories() {
 
         // evenement click
 
-        boutonsFiltres.addEventListener("click", () => {
+        boutonsFiltres.addEventListener("click", (e) => {
+          e.preventDefault();
           recuperationTravaux(categories.name);
         });
       }
