@@ -1,5 +1,6 @@
 const valider = document.getElementById("valider-modale2");
 
+// Prévisualisation de l'image selectionnée
 function previewPictrure() {
   const sectionPrev = document.getElementById("image-prev");
   const inputImage = document.getElementById("selectioner");
@@ -16,10 +17,23 @@ function previewPictrure() {
 }
 previewPictrure();
 
+//Validation et vérification formulaire
+
 function validationFormulaire() {
+  //Capture de l'élément seléctionné
+
   let selectionFichier = document.getElementById("selectioner").files[0];
+
+  // Valeure du champs titre
+
   const titre = document.getElementById("titre").value;
+
+  // valeur du champs catégorie
+
   const categorie = document.getElementById("liste-categories").value;
+
+  //Condition de validation gestion des erreurs
+
   if (selectionFichier == undefined) {
     alert("Veuillez choisir une image");
     return;
@@ -32,14 +46,15 @@ function validationFormulaire() {
     alert("Veuillez selectionner une catégorie");
     return;
   }
-  // console.log(selectionFichier);
-  // console.log(titre);
-  // console.log(categorie);
+
+  // Création FormData avec les éléments du formulaire
 
   let formData = new FormData();
   formData.append("image", selectionFichier);
   formData.append("title", titre);
   formData.append("category", categorie);
+
+  // Envoie FormData dans la requète poste
 
   fetch("http://localhost:5678/api/works", {
     method: "POST",
@@ -55,7 +70,6 @@ function validationFormulaire() {
       throw new Error("erreur lors du transfert");
     })
     .then((data) => {
-      console.log(data);
       fermerModale2();
       ouvrirModale1();
       affichageDesMiniature();
@@ -65,6 +79,8 @@ function validationFormulaire() {
       console.error(error);
     });
 }
+
+// Evenement de validation du formulaire
 
 valider.addEventListener("click", (e) => {
   e.preventDefault();
