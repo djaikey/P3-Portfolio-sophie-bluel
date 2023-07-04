@@ -1,7 +1,7 @@
 // Catégorie de filtrage
 
 function recuperationCategories() {
-  // Récupération des catégories de l'API
+  // Récupération des catégories de l'API (fetch GET)
 
   fetch("http://localhost:5678/api/categories")
     .then((reponse) => reponse.json())
@@ -55,7 +55,7 @@ function recuperationCategories() {
 
 function recuperationTravaux(filtre = "tous") {
   /*le parametre de la fonction recuperationTravaux indique 
-  l'affichage de filtre tous et l'affichage par defaut par defaut*/
+  l'affichage de filtre tous est l'affichage par defaut par defaut*/
 
   // Récupération elements du tableau travaux de l'API
 
@@ -86,7 +86,11 @@ function affichage(elementsGalerie) {
   // Choix de l'emplacement parent (balise qui accueui les fiches)
 
   const sectionAffichage = document.querySelector(".gallery");
+
+  // rafraichissement affichage
   sectionAffichage.innerHTML = "";
+
+  // boucle sur les element a afficher
   for (let i = 0; i < elementsGalerie.length; i++) {
     const articleGalerie = elementsGalerie[i];
 
@@ -95,8 +99,12 @@ function affichage(elementsGalerie) {
     const fiche = document.createElement("div");
     fiche.classList.add("fiche");
     const image = document.createElement("img");
+
+    //l'url de l'image correspond a la clé imageURL dans l'API
     image.src = articleGalerie.imageUrl;
+
     const titre = document.createElement("p");
+    //le titre corespond a la clé title de l'API
     titre.innerText = articleGalerie.title;
 
     //Rattachement des elements
