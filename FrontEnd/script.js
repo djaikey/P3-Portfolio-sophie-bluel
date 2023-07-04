@@ -12,7 +12,7 @@ function recuperationCategories() {
 
       const sectionFiltres = document.querySelector(".filtres");
 
-      // Création du bouton filtre
+      // Création du bouton filtre tous
 
       const boutonTous = document.createElement("button");
       boutonTous.classList.add("boutonTous");
@@ -90,7 +90,7 @@ function affichage(elementsGalerie) {
   // rafraichissement affichage
   sectionAffichage.innerHTML = "";
 
-  // boucle sur les element a afficher
+  // boucle sur les elements a afficher
   for (let i = 0; i < elementsGalerie.length; i++) {
     const articleGalerie = elementsGalerie[i];
 

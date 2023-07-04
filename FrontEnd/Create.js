@@ -5,11 +5,19 @@ function previewPictrure() {
   const sectionPrev = document.getElementById("image-prev");
   const inputImage = document.getElementById("selectioner");
   const iconeImage = document.getElementById("icone-image");
+
+  // evenement change pour acceder a l'input file
+
   inputImage.addEventListener("change", (e) => {
     iconeImage.style.display = "none";
     sectionPrev.innerHTML = "";
+
+    //création de la prévisualisation
+
     const prevImage = document.createElement("img");
     let selectionFichier = document.getElementById("selectioner").files[0];
+
+    //création et assigantion de l'url du fichier a l'image
     const urlObjet = URL.createObjectURL(selectionFichier);
     prevImage.src = urlObjet;
     sectionPrev.appendChild(prevImage);

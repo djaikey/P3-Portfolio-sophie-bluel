@@ -1,8 +1,9 @@
 const overlay = document.querySelector(".modales");
+
 function affichageDesMiniature() {
-  // Récupération elements du tableau travaux de l'API
   const miniatures = document.getElementById("affichage-miniature");
   miniatures.innerHTML = "";
+  // Récupération elements du tableau travaux de l'API
   fetch("http://localhost:5678/api/works")
     .then((reponse) => reponse.json())
     .then((projets) => {
@@ -155,6 +156,7 @@ function boutonFermerModale2() {
   });
 }
 
+// fermeture au click en dehors de la modale
 document.onclick = (event) => {
   const elementClique = event.target;
 
