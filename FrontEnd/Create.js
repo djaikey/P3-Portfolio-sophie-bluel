@@ -1,10 +1,10 @@
 const valider = document.getElementById("valider-modale2");
-
+const prevImage = document.createElement("img");
+const iconeImage = document.getElementById("icone-image");
 // Prévisualisation de l'image selectionnée
 function previewPictrure() {
   const sectionPrev = document.getElementById("image-prev");
   const inputImage = document.getElementById("selectioner");
-  const iconeImage = document.getElementById("icone-image");
 
   // evenement change pour acceder a l'input file
 
@@ -14,7 +14,7 @@ function previewPictrure() {
 
     //création de la prévisualisation
 
-    const prevImage = document.createElement("img");
+    prevImage.classList.add("imagePrevisualise");
     let selectionFichier = document.getElementById("selectioner").files[0];
 
     //création et assigantion de l'url du fichier a l'image
@@ -41,7 +41,7 @@ function validationFormulaire() {
   const categorie = document.getElementById("liste-categories").value;
 
   //Condition de validation gestion des erreurs
-
+  console.log(selectionFichier);
   if (selectionFichier == undefined) {
     alert("Veuillez choisir une image");
     return;
@@ -79,6 +79,9 @@ function validationFormulaire() {
     })
     .then((data) => {
       fermerModale2();
+      document.querySelector(".formulaire-ajout").reset();
+      prevImage.remove();
+      iconeImage.style.display = "block";
       ouvrirModale1();
       affichageDesMiniature();
       recuperationTravaux();

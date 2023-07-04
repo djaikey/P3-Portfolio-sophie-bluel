@@ -1,10 +1,14 @@
 const token = localStorage.getItem("token");
+
+//emplacement affichage miniature
+
 const miniatures = document.querySelector(".affichage-miniature");
-//event click dans l'affichage miniature
+//event click dans l'affichage miniature identification de l'id a supprimer
+
 miniatures.addEventListener("click", (e) => {
   e.preventDefault();
 
-  // Assiganation de l'Id aux bouton de suppression
+  // Assiganation de l'Id du projet aux bouton de suppression
   if (e.target.closest(".bouton-delete")) {
     const emplacementClick = e.target.closest(".bouton-delete");
     const idDuBouton = emplacementClick.id;
